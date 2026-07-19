@@ -150,10 +150,19 @@ def chart(traces, title: str, y1: str = "", y2: str | None = None,
     st.plotly_chart(fig, width="stretch")
 
 
+def md_safe(text: str) -> str:
+    """Escape $ so st.markdown doesn't render money amounts as LaTeX math.
+
+    Pairs like "$5.80 ... $8.04" otherwise become KaTeX formulas. Streamlit's
+    escape for a literal dollar sign is a backslash.
+    """
+    return text.replace("$", "\\$")
+
+
 def commentary(category: str) -> None:
     if analysis and category in analysis.get("categories", {}):
         with st.expander(f"Analyst commentary — {category}", expanded=False):
-            st.markdown(analysis["categories"][category])
+            st.markdown(md_safe(analysis["categories"][category]))
     else:
         st.caption("No saved commentary — run `python agents/orchestrator.py` "
                    "to generate the analysis.")
@@ -328,7 +337,7 @@ with st.sidebar:
             except Exception as e:
                 st.session_state["chat_answer"] = f"⚠️ Agent call failed: {e}"
     if "chat_answer" in st.session_state:
-        st.markdown(st.session_state["chat_answer"])
+        st.markdown(md_safe(st.session_state["chat_answer"]))
 
     st.divider()
     st.info(DISCLAIMER)  # the advice disclaimer, shown once
