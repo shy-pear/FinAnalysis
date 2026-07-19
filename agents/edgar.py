@@ -38,6 +38,12 @@ INSTANT_CONCEPTS = {
     "current_liabilities", "debt_current", "debt_noncurrent",
 }
 
+# Period-average concepts: YTD-subtraction (Q4 = FY − YTD9) is invalid for
+# averages — it produces nonsense like negative share counts. Quarterly values
+# come only from reported 3-month facts; Q4 uses the FY average as the closest
+# reported figure (companies do not file a separate Q4 report).
+AVERAGE_CONCEPTS = {"shares_diluted"}
+
 # Superset of tags worth showing the extraction agent — keeps the prompt small.
 CANDIDATE_TAGS = {
     "RevenueFromContractWithCustomerExcludingAssessedTax", "Revenues",
@@ -48,7 +54,8 @@ CANDIDATE_TAGS = {
     "NetCashProvidedByUsedInOperatingActivitiesContinuingOperations",
     "PaymentsToAcquirePropertyPlantAndEquipment",
     "PaymentsToAcquireProductiveAssets", "PaymentsOfDividends",
-    "PaymentsOfDividendsCommonStock", "PaymentsForRepurchaseOfCommonStock",
+    "PaymentsOfDividendsCommonStock", "PaymentsOfDividendsAndDividendEquivalents",
+    "PaymentsForRepurchaseOfCommonStock",
     "Assets", "StockholdersEquity",
     "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
     "CashAndCashEquivalentsAtCarryingValue", "AssetsCurrent",
@@ -217,7 +224,8 @@ def fiscal_period(end: pd.Timestamp, fye_month: int) -> tuple[int, int]:
     return fy, quarter
 
 
-def quarterize(entries: list[dict], fye_month: int) -> tuple[dict, dict]:
+def quarterize(entries: list[dict], fye_month: int,
+               subtractable: bool = True) -> tuple[dict, dict]:
     """Turn duration facts into true quarterly and annual values.
 
     Filings often report cash-flow items only as year-to-date (6/9-month)
@@ -246,6 +254,13 @@ def quarterize(entries: list[dict], fye_month: int) -> tuple[dict, dict]:
     quarterly, annual = {}, {}
     for fy, slot in by_fy.items():
         q, ytd = dict(slot["q"]), slot["ytd"]
+        if not subtractable:
+            # Averages: only reported 3-month values; Q4 ≈ FY average
+            if slot["fy"]:
+                annual[fy] = slot["fy"]
+                q.setdefault(4, slot["fy"])
+            quarterly.update({(fy, qi): rec for qi, rec in q.items()})
+            continue
         # Recover missing quarters from YTD chains
         if 2 not in q and 2 in ytd and 1 in q:
             q[2] = {"val": ytd[2]["val"] - q[1]["val"], "accn": ytd[2]["accn"],
@@ -291,7 +306,8 @@ def extract_concept_series(filtered: dict, tag_map: dict, fye_month: int) -> dic
             series[concept] = {"quarterly": inst,
                                "annual": {fy: rec for (fy, q), rec in inst.items() if q == 4}}
         else:
-            quarterly, annual = quarterize(entries, fye_month)
+            quarterly, annual = quarterize(entries, fye_month,
+                                           subtractable=concept not in AVERAGE_CONCEPTS)
             series[concept] = {"quarterly": quarterly, "annual": annual}
     return series
 

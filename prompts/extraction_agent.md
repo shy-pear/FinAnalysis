@@ -28,7 +28,7 @@ pipeline can stitch a complete series.
 | `shares_diluted` | WeightedAverageNumberOfDilutedSharesOutstanding |
 | `operating_cash_flow` | NetCashProvidedByUsedInOperatingActivities, NetCashProvidedByUsedInOperatingActivitiesContinuingOperations |
 | `capex` | PaymentsToAcquirePropertyPlantAndEquipment, PaymentsToAcquireProductiveAssets |
-| `dividends_paid` | PaymentsOfDividends, PaymentsOfDividendsCommonStock |
+| `dividends_paid` | PaymentsOfDividends, PaymentsOfDividendsCommonStock, PaymentsOfDividendsAndDividendEquivalents |
 | `buybacks` | PaymentsForRepurchaseOfCommonStock |
 | `total_assets` | Assets |
 | `total_equity` | StockholdersEquity, StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest |

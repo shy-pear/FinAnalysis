@@ -137,7 +137,8 @@ async def _build_edgar_dataframe(ticker: str, budget: Budget):
     return df
 
 
-async def _run(source: str, ticker: str | None, max_budget_usd: float) -> dict:
+async def _run(source: str, ticker: str | None, max_budget_usd: float,
+               skip_analysis: bool = False) -> dict:
     budget = Budget(max_budget_usd)
 
     if source == "sample":
@@ -173,6 +174,12 @@ async def _run(source: str, ticker: str | None, max_budget_usd: float) -> dict:
     print(f"  {meta['row_count']} rows, periods {meta['periods_covered'][0]} .. "
           f"{meta['periods_covered'][1]}, source={meta['source']}")
 
+    if skip_analysis:
+        _banner("Analysis skipped (--skip-analysis) — data written, no report generated")
+        _print_costs(budget)
+        return {"source": source, "ticker": meta["ticker"], "rows": meta["row_count"],
+                "validation": report["verdict"], "cost_usd": round(budget.spent, 4)}
+
     _banner(f"Analysis agent [{AGENT_MODELS['analysis']}] — written trend analysis")
     budget.ensure_available("analysis")
     report_md, categories, cost = await runners.run_analysis(
@@ -186,24 +193,28 @@ async def _run(source: str, ticker: str | None, max_budget_usd: float) -> dict:
     print(f"  Report: {len(report_md):,} chars across {len(categories)} categories; "
           f"cost ${cost:.4f}")
 
+    _print_costs(budget)
+    return {"source": source, "ticker": meta["ticker"], "rows": meta["row_count"],
+            "validation": report["verdict"], "cost_usd": round(budget.spent, 4)}
+
+
+def _print_costs(budget: Budget) -> None:
     _banner("Cost summary")
     for agent, cost in budget.per_agent.items():
         print(f"  {agent:<12} {AGENT_MODELS.get(agent, '-'):<22} ${cost:.4f}")
     print(f"  {'TOTAL':<12} {'':<22} ${budget.spent:.4f}  (cap ${budget.max_usd:.2f})")
 
-    return {"source": source, "ticker": meta["ticker"], "rows": meta["row_count"],
-            "validation": report["verdict"], "cost_usd": round(budget.spent, 4)}
-
 
 def run_pipeline(source: str = "sample", ticker: str | None = None,
-                 max_budget_usd: float = DEFAULT_MAX_BUDGET_USD) -> dict:
+                 max_budget_usd: float = DEFAULT_MAX_BUDGET_USD,
+                 skip_analysis: bool = False) -> dict:
     """Headless entry point: run the full pipeline and return a summary dict."""
     get_required("ANTHROPIC_API_KEY")  # clear message, not a crash, if missing
     if source == "edgar":
         if not ticker:
             raise SystemExit("--ticker is required with --source edgar")
         get_required("SEC_EDGAR_USER_AGENT")
-    return asyncio.run(_run(source, ticker, max_budget_usd))
+    return asyncio.run(_run(source, ticker, max_budget_usd, skip_analysis))
 
 
 def main() -> int:
@@ -214,9 +225,12 @@ def main() -> int:
     parser.add_argument("--ticker", help="Ticker symbol (edgar mode only)")
     parser.add_argument("--max-budget-usd", type=float, default=DEFAULT_MAX_BUDGET_USD,
                         help=f"Hard cap on LLM spend (default {DEFAULT_MAX_BUDGET_USD})")
+    parser.add_argument("--skip-analysis", action="store_true",
+                        help="Stop after validation+write; skip the (priciest) analysis agent")
     args = parser.parse_args()
     try:
-        summary = run_pipeline(args.source, args.ticker, args.max_budget_usd)
+        summary = run_pipeline(args.source, args.ticker, args.max_budget_usd,
+                               args.skip_analysis)
     except BudgetExceeded as e:
         print(f"\nBUDGET EXCEEDED: {e}")
         return 2
