@@ -173,13 +173,19 @@ def load_validation_report() -> dict:
 
 
 def export_tableau() -> Path:
-    """Write tableau_export.csv — the same long-format data, Tableau-ready.
+    """Write the Tableau-ready CSVs and return the per-ticker path.
 
-    Kept as a separate file so the Tableau workflow has a stable artifact
-    even while financials.csv is being regenerated.
+    Two files, same long-format data:
+    - tableau_export_<TICKER>.csv — one per company, never touched by other
+      companies' runs. Re-running the same ticker refreshes it in place (new
+      quarters), so a published Tableau workbook keeps a stable data source.
+    - tableau_export.csv — canonical name, always mirrors the latest run.
     """
     df = load_financials()
     out = df.copy()
     out["period"] = out["period"].dt.strftime("%Y-%m-%d")
+    ticker = str(out["ticker"].iloc[0])
+    per_ticker = DATA_DIR / f"tableau_export_{ticker}.csv"
+    out.to_csv(per_ticker, index=False)
     out.to_csv(TABLEAU_EXPORT_CSV, index=False)
-    return TABLEAU_EXPORT_CSV
+    return per_ticker

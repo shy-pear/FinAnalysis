@@ -31,7 +31,12 @@ click by click.
 
 1. Open Tableau. On the start page, under **Connect → To a File**, click
    **Text file**.
-2. Browse to your project folder and select `data/tableau_export.csv`.
+2. Browse to your project folder and select the **per-ticker file** for the
+   company you're charting, e.g. `data/tableau_export_GOOG.csv`. Each pipeline
+   run writes one file per company; other companies' runs never touch it, so
+   your workbook's data source stays stable. (`data/tableau_export.csv` also
+   exists and always mirrors the *latest* run, whichever company that was —
+   prefer the per-ticker file for anything you plan to publish.)
 3. The **Data Source** page opens with a preview grid of the CSV.
 
 ## 3. Verify the field types
@@ -167,12 +172,13 @@ Every row carries the SEC filing URL it came from. To surface it:
 
 ### Updating later (manual, every time)
 
-1. Re-run the pipeline to refresh `data/tableau_export.csv`
-   (`python agents/orchestrator.py --source edgar --ticker GOOG`).
+1. Re-run the pipeline for the **same ticker** your workbook uses
+   (`python agents/orchestrator.py --source edgar --ticker GOOG`) — its
+   per-ticker CSV (`tableau_export_GOOG.csv`) refreshes in place with the new
+   periods; other tickers' files are untouched.
 2. Open your workbook in Tableau Desktop Public Edition (**File → Open from
    Tableau Public**).
-3. In the **Data** menu → your data source → **Refresh** (same file path), or
-   **Edit Data Source** to point at the new CSV if it moved.
+3. In the **Data** menu → your data source → **Refresh** (same file path).
 4. **File → Save to Tableau Public As…** again, overwriting the workbook.
 
 There is no way to automate steps 2–4 on Tableau Public — no publish API

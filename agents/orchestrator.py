@@ -173,10 +173,11 @@ async def _run(source: str, ticker: str | None, max_budget_usd: float,
     meta = data_access.load_metadata()
     print(f"  {meta['row_count']} rows, periods {meta['periods_covered'][0]} .. "
           f"{meta['periods_covered'][1]}, source={meta['source']}")
-    # Keep the Tableau data file in lockstep with every successful write, so
-    # the manual Tableau Public re-publish always has current data to point at.
+    # Keep the Tableau data files in lockstep with every successful write:
+    # a per-ticker file (stable source for published workbooks) plus the
+    # canonical tableau_export.csv mirroring the latest run.
     tableau_path = data_access.export_tableau()
-    print(f"  Tableau export refreshed: {tableau_path.name} ({meta['ticker']})")
+    print(f"  Tableau exports refreshed: {tableau_path.name} + tableau_export.csv (latest)")
 
     if skip_analysis:
         _banner("Analysis skipped (--skip-analysis) — data written, no report generated")
