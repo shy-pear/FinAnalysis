@@ -6,9 +6,20 @@ this document defines *what to build*.
 Build in the stages below, **in order**. After each stage, stop, show what was
 created, and wait for approval before continuing.
 
-Stages 1–3 build and debug against synthetic sample data so development costs
-nothing in API credit. **Stage 3b switches to real filings** and is where the system
-is proven against actual company data — the project is not done until that passes.
+Stages 1–2 build and debug against synthetic sample data and require no API key.
+Stage 3 is key setup. Stage 4 builds the agents; **Stage 4b switches to real
+filings** and is where the system is proven against actual company data — the
+project is not done until that passes.
+
+| Stage | What | API key | Spends credit |
+|---|---|---|---|
+| 1 | Scaffold + data access layer | no | no |
+| 2 | Sample dataset | no | no |
+| 3 | API key setup | — | no |
+| 4 | Agent pipeline (sample mode) | yes | minimal |
+| 4b | Real-ticker smoke test | yes | **yes** |
+| 5 | Streamlit dashboard | yes | minimal |
+| 6 | Tableau export + guide | no | no |
 
 ---
 
@@ -132,7 +143,36 @@ covered, and the first 15 rows. Output loads into pandas with `period` as dateti
 
 ---
 
-## Stage 3 — Agent pipeline
+## Stage 3 — API key setup
+
+**This must come before any agent runs.** Stage 4 invokes Claude; without a key it
+cannot run.
+
+Create `.env.example` listing every required environment variable with placeholder
+values and a comment explaining what each is and where to obtain it.
+
+Then print an explicit setup message to the user stating:
+- exactly which file to create (`.env`, copied from `.env.example`)
+- exactly which line to edit to add the Anthropic API key
+- the terminal command to verify the key is being read
+- confirmation that `.env` is gitignored
+
+Never ask the user to paste a key into chat or into source code. Missing key →
+clear, actionable message, not a stack trace.
+
+**Note on which key this is:** this key is for the *pipeline* — the Agent SDK calling
+Claude programmatically. Claude Code itself authenticates separately via the user's
+subscription and does not use this key.
+
+**Stop here and let the user set their key before continuing to Stage 4.**
+
+**Acceptance:** running any entry point without a key produces a readable
+instruction, not a crash. With a key set, the verification command confirms it is
+being read.
+
+---
+
+## Stage 4 — Agent pipeline
 
 Four agents, each with its system prompt in `/prompts/<name>.md`. Prompts are loaded
 at runtime — no role text embedded in Python. Mark the load site with a comment.
@@ -199,7 +239,7 @@ Runs the four agents in sequence. Requirements:
 **Acceptance:** `python agents/orchestrator.py --source sample` runs end-to-end and
 produces `financials.csv` plus analysis output.
 
-### Stage 3b — Real-ticker smoke test (do this before Stage 4)
+### Stage 4b — Real-ticker smoke test (do this before Stage 5)
 
 Before moving on, prove the pipeline works against **real** data. This is the step
 that catches extraction problems while extraction is still the thing in focus.
@@ -242,25 +282,6 @@ confirm the extraction generalizes rather than being tuned to a single company.
 **Acceptance:** two real tickers produce schema-valid output whose headline figures
 have been manually verified against the source filings, with `metadata.json` showing
 `"source": "edgar"`.
-
----
-
-## Stage 4 — API key setup
-
-Create `.env.example` listing every required environment variable with placeholder
-values and a comment explaining what each is and where to obtain it.
-
-Then print an explicit setup message to the user stating:
-- exactly which file to create (`.env`, copied from `.env.example`)
-- exactly which line to edit to add the Anthropic API key
-- the terminal command to verify the key is being read
-- confirmation that `.env` is gitignored
-
-Never ask the user to paste a key into chat or into source code. Missing key →
-clear, actionable message, not a stack trace.
-
-**Acceptance:** running any entry point without a key produces a readable
-instruction, not a crash.
 
 ---
 
@@ -363,7 +384,7 @@ should mean here.
 **A. Scheduled refresh (most likely next step).**
 A cron job or GitHub Action runs `orchestrator.py --source edgar` weekly; the
 dashboard passively reads whatever is current. Requires the orchestrator to be
-headless-invocable (Stage 3) and the dashboard to read via `data_access` with a
+headless-invocable (Stage 4) and the dashboard to read via `data_access` with a
 sane cache TTL (Stage 5). No dashboard changes needed if those hold.
 
 **B. Manual refresh button.**
@@ -398,25 +419,42 @@ fundamentals. Do not blend the two data sources in one table.
 
 ## Definition of done
 
+**Stage 1 — Scaffold**
+- [ ] `pip install -r requirements.txt` succeeds in a clean venv
+- [ ] **All CSV reads/writes route through `data_access.py`** — grep for `read_csv`
+      and `to_csv` returns hits in that file only
+
+**Stage 2 — Sample data**
 - [ ] `python data/generate_sample_data.py` produces a schema-valid CSV
-- [ ] `python agents/orchestrator.py --source sample` runs end-to-end with no live API calls
+- [ ] **`metadata.json` is written on every data write** with `last_updated` and `source`
+
+**Stage 3 — API key**
+- [ ] Missing key produces a readable instruction, not a stack trace
+- [ ] No secrets in source or git history; `.env` gitignored
+
+**Stage 4 — Agent pipeline**
+- [ ] `python agents/orchestrator.py --source sample` runs end-to-end
+- [ ] All four role prompts are editable markdown files under `/prompts`
+- [ ] Per-agent model config and `max_budget_usd` are visible at the top of the orchestrator
+- [ ] **Orchestrator is headless-invocable** — importable and script-runnable with
+      no interactive prompts
+
+**Stage 4b — Real data**
 - [ ] **Two real tickers** (different fiscal calendars) produce schema-valid output
       via `--source edgar`
 - [ ] **Headline figures manually verified** against the source filings — revenue and
       net income match exactly, units and scale correct, fiscal periods correctly
       labeled, quarterly rows are quarterly and not YTD
-- [ ] **The dashboard has been viewed with real data**, not only sample data
-- [ ] **All CSV reads/writes route through `data_access.py`** — grep for `read_csv`
-      and `to_csv` returns hits in that file only
-- [ ] **`metadata.json` is written on every data write** with `last_updated` and `source`
-- [ ] **Dashboard displays data freshness** from `metadata.json`
-- [ ] **Orchestrator is headless-invocable** — importable and script-runnable with
-      no interactive prompts
-- [ ] All four role prompts are editable markdown files under `/prompts`
-- [ ] Per-agent model config and `max_budget_usd` are visible at the top of the orchestrator
+
+**Stage 5 — Dashboard**
 - [ ] `streamlit run dashboard/app.py` renders all five sections and both diagnostic charts
+- [ ] **Dashboard displays data freshness** from `metadata.json`
+- [ ] **The dashboard has been viewed with real data**, not only sample data
 - [ ] Quarterly growth is YoY everywhere — verified, not assumed
+
+**Stage 6 — Tableau**
 - [ ] `tableau_export.csv` loads into Tableau with `period` typed as Date
 - [ ] Tableau guide includes the public-visibility warning and manual-refresh note
-- [ ] No secrets in source or git history; `.env` gitignored
+
+**Throughout**
 - [ ] No investment advice anywhere in output
