@@ -34,7 +34,6 @@ import data_access  # same directory; all writes go through the accessor
 
 COMPANY = "Northwind Devices Inc. (Synthetic)"
 TICKER = "NWD"
-RNG = np.random.default_rng(42)
 
 # Fiscal year ends September 30. Q1 is the December (holiday) quarter.
 FISCAL_YEARS = list(range(2020, 2026))  # FY2020 is hidden — YoY base only
@@ -62,6 +61,8 @@ def source_url(fy: int, quarter: str) -> str:
 
 def build_quarter_fundamentals() -> list[dict]:
     """Model one dict of fundamentals per fiscal quarter, FY2020–FY2025."""
+    # Local, seeded RNG so build_dataframe() is deterministic on every call
+    RNG = np.random.default_rng(42)
     quarters = []
     shares = 5.28e9          # diluted shares at start of FY2020
     equity = 21.0e9
@@ -204,7 +205,11 @@ def aggregate_year(quarters: list[dict], fy: int) -> dict:
             "total_assets": q4["total_assets"], "current_ratio": q4["current_ratio"]}
 
 
-def main() -> None:
+def build_dataframe() -> pd.DataFrame:
+    """Build the full sample dataset without writing anything to disk.
+
+    The orchestrator uses this so validation can run before the write.
+    """
     quarters = build_quarter_fundamentals()
     years = {fy: aggregate_year(quarters, fy) for fy in FISCAL_YEARS}
     rows: list[dict] = []
@@ -230,7 +235,11 @@ def main() -> None:
         }
         rows.extend(rows_for_period(y, py, fy, "FY", "Annual", extra))
 
-    df = pd.DataFrame(rows)
+    return pd.DataFrame(rows)
+
+
+def main() -> None:
+    df = build_dataframe()
     data_access.write_financials(df, source="sample")  # stamps metadata.json
 
     # Acceptance summary

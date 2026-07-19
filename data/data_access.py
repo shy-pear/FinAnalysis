@@ -18,6 +18,8 @@ DATA_DIR = Path(__file__).resolve().parent
 FINANCIALS_CSV = DATA_DIR / "financials.csv"
 METADATA_JSON = DATA_DIR / "metadata.json"
 TABLEAU_EXPORT_CSV = DATA_DIR / "tableau_export.csv"
+ANALYSIS_JSON = DATA_DIR / "analysis.json"
+VALIDATION_JSON = DATA_DIR / "validation_report.json"
 
 # Tidy long format — one row per company-period-metric. See CLAUDE.md.
 SCHEMA_COLUMNS = [
@@ -138,6 +140,36 @@ def load_metadata() -> dict:
             "Run `python data/generate_sample_data.py` first."
         )
     return json.loads(METADATA_JSON.read_text())
+
+
+def write_analysis(payload: dict) -> None:
+    """Persist the analysis agent's output (per-category commentary + report).
+
+    Expected keys: ticker, source, generated_at, categories (dict of
+    category -> markdown commentary), report_md (full report).
+    """
+    ANALYSIS_JSON.write_text(json.dumps(payload, indent=2) + "\n")
+
+
+def load_analysis() -> dict:
+    """Return the last analysis payload, or raise with a pointer to the fix."""
+    if not ANALYSIS_JSON.exists():
+        raise FileNotFoundError(
+            f"{ANALYSIS_JSON} not found — run the pipeline first: "
+            "`python agents/orchestrator.py --source sample`."
+        )
+    return json.loads(ANALYSIS_JSON.read_text())
+
+
+def write_validation_report(payload: dict) -> None:
+    """Persist the validation agent's findings for auditability."""
+    VALIDATION_JSON.write_text(json.dumps(payload, indent=2) + "\n")
+
+
+def load_validation_report() -> dict:
+    if not VALIDATION_JSON.exists():
+        raise FileNotFoundError(f"{VALIDATION_JSON} not found — run the pipeline first.")
+    return json.loads(VALIDATION_JSON.read_text())
 
 
 def export_tableau() -> Path:
