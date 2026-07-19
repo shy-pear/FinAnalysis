@@ -1,0 +1,69 @@
+# Financial Analysis: Alphabet Inc. (GOOG)
+
+This analysis covers Alphabet Inc. (GOOG) across fiscal years 2023–2025, supplemented by quarterly data from Q1 2023 through Q4 2025. Over the three-year window, Alphabet moved through two overlapping phases: a sharp profitability recovery culminating in FY2024, followed by an unprecedented capital-deployment escalation in FY2025 that decoupled operating cash flow from free cash flow and shifted the company from a net-cash to a net-debt balance sheet for the first time in the dataset.
+
+---
+
+## Growth
+
+Revenue expanded from $307.4B (FY2023) to $350.0B (FY2024) to $402.8B (FY2025), a cumulative gain of 31.1% over two years. Annual growth rates accelerated each year: 8.68% (FY2023) → 13.87% (FY2024) → 15.09% (FY2025), reversing a prior-cycle deceleration that is clearly visible in the quarterly series — year-over-year revenue growth troughed at just 2.61% in Q1 2023 before recovering through successive quarters to 13.49% by Q4 2023 and establishing a plateau in the 12%–16% range across FY2024.
+
+The quarterly cadence through FY2025 shows no deceleration at year-end. Q3 2025 YoY revenue growth of 15.95% accelerated further to 18.00% in Q4 2025 — the highest quarterly rate in the dataset. Revenue reached $102.3B in Q3 2025 and $113.8B in Q4 2025, confirming an upward slope entering FY2026.
+
+EPS (diluted) grew materially faster than revenue, rising from $5.80 (FY2023) to $8.04 (FY2024, +38.6%) to $10.81 (FY2025, +34.5%). Over the two-year span, EPS grew 86.4% against revenue growth of 31.1%. This divergence reflects two amplifying forces — margin expansion and a shrinking share count — that are examined in Profitability and Capital Allocation below.
+
+---
+
+## Profitability
+
+Gross margin expanded steadily: 56.63% (FY2023) → 58.20% (FY2024) → 59.65% (FY2025), a 202-basis-point improvement over two years. Operating margin saw a sharper and front-loaded inflection, rising 469 bps from 27.42% (FY2023) to 32.11% (FY2024), then holding virtually flat at 32.03% (FY2025). The dominant profitability story in this window is the FY2023-to-FY2024 expansion; FY2025 was a year of margin *preservation* at the operating line, not further expansion.
+
+Pairing this with the Growth data: revenue growth accelerated (8.68% → 15.09%) while operating margin simultaneously expanded (+469 bps through FY2024 and then held). This confirms that Alphabet's revenue gains were high-quality and profitable — the business grew faster and became more efficient at the same time. Whether the gross-margin improvement reflects pricing, mix shift toward higher-margin products, or cost efficiencies the data cannot disambiguate; the MD&A is the appropriate reference for disaggregation.
+
+The quarterly operating margin series surfaces an important H2 2025 nuance. On a year-over-year basis, Q1 2025 (33.92%) expanded 229 bps versus Q1 2024 (31.63%), and Q2 2025 (32.43%) was essentially flat versus Q2 2024 (32.36%). But Q3 2025 (30.51%) contracted 180 bps versus Q3 2024 (32.31%), and Q4 2025 (31.57%) narrowed 54 bps versus Q4 2024 (32.11%). YoY operating margin compression therefore emerged specifically in H2 2025. One possible driver — the data cannot confirm this — is rising depreciation and operating costs from the accelerating infrastructure build, whose expense flows through the income statement ahead of associated revenue.
+
+Net margin continued expanding through the full window: 24.01% (FY2023) → 28.60% (FY2024) → 32.81% (FY2025). The fact that net margin expanded in FY2025 even as operating margin was flat implies a below-the-line contributor — interest income on cash balances, a favorable effective tax rate, or other non-operating items. ROIC, the capital-efficiency lens, rose from 23.60% (FY2023) to 27.94% (FY2024) but dipped to 25.39% (FY2025) — the first decline in the dataset — which likely reflects the early-stage nature of the heavy capital deployment before associated revenues fully materialize.
+
+---
+
+## Cash Generation
+
+Operating cash flow grew strongly throughout the period: $101.7B (FY2023) → $125.3B (FY2024, +23.2%) → $164.7B (FY2025, +31.5%). Over two years, OCF rose 61.9%, approximately doubling the 31.1% revenue growth rate — a hallmark of genuine operating leverage in the cash-generation engine.
+
+The diagnostic pairing of net income against operating cash flow confirms sustained earnings quality. The OCF-to-Net-Income ratio was 1.38x (FY2023), easing to 1.25x in both FY2024 and FY2025. A ratio persistently above 1.0x means every dollar of reported net income is backed by more than a dollar of operating cash receipts; there is no sign of accrual-based inflation of earnings. The decline from 1.38x to 1.25x warrants monitoring but is not, at its current level, a quality concern. The data cannot isolate whether the moderation reflects working-capital timing, changes in deferred revenue, or other drivers — the cash-flow statement detail in the filings would clarify this.
+
+Free cash flow tells a starkly different story. Despite OCF rising $63.0B over the two-year period, FCF grew from just $69.5B (FY2023) to $72.8B (FY2024, +4.7%) to $73.3B (FY2025, +0.7%) — effectively flat. The explanation is the dramatic capex escalation: $32.3B (FY2023) → $52.5B (FY2024) → $91.4B (FY2025), with capex as a percentage of revenue surging from 10.49% to 15.01% to 22.70% — more than doubling in two years. FCF margin consequently compressed from 22.61% (FY2023) to 20.79% (FY2024) to 18.19% (FY2025). The trajectory is unambiguous: as long as the capex ramp persists at this intensity, OCF and FCF will diverge further, and FCF-based return measures will continue compressing regardless of operating performance.
+
+---
+
+## Financial Health & Solvency
+
+Alphabet's balance sheet remained robust throughout the period, though FY2025 introduced structural changes that represent a meaningful break from prior years. The current ratio was 2.10x (FY2023), dipped to 1.84x (FY2024), and recovered to 2.01x (FY2025) — all levels indicating comfortable near-term liquidity. Total equity expanded from $283.4B (FY2023) to $325.1B (FY2024) to $415.3B (FY2025), growing 46.5% as retained earnings accumulated even after large capital returns.
+
+The most significant balance-sheet inflection in the dataset is the reversal of Alphabet's net debt position. The company held net cash of $11.2B (FY2023) and $9.3B (FY2024), then swung to a net debt position of $17.8B (FY2025) — a $27.1B reversal in a single year. This was driven by total debt nearly tripling from $14.2B (FY2024) to $48.5B (FY2025), while cash and equivalents grew only modestly from $23.5B to $30.7B. The debt-to-equity ratio, while still low in absolute terms, rose from 0.04x (FY2024) to 0.12x (FY2025). Total assets jumped $145.0B in FY2025 alone — from $450.3B to $595.3B — consistent with the capitalization of the infrastructure investment reflected in the capex figures.
+
+Interest coverage declined from a peak of 419.4x (FY2024) to 175.3x (FY2025), still an extraordinarily high ratio that signals effectively zero near-term insolvency risk. The decline is a mechanical consequence of higher debt outstanding, not financial stress. In aggregate, Alphabet enters any plausible adverse scenario in FY2026 with strong liquidity (current ratio above 2.0x), low absolute leverage (D/E of 0.12x), a rapidly growing operating income base, and ample interest coverage — a combination that indicates the company could comfortably absorb a severe revenue contraction without a solvency threat.
+
+---
+
+## Capital Allocation
+
+Alphabet's capital allocation strategy underwent a clear realignment over the three-year window. Share buybacks remained large but declined: $61.5B (FY2023) → $62.2B (FY2024) → $45.7B (FY2025), a 26.6% reduction in the final year. Simultaneously, the company initiated dividends for the first time in FY2024 at $7.4B and grew them to $10.1B in FY2025 (+36.5%). Total shareholder returns (buybacks plus dividends) were $61.5B (FY2023), $69.6B (FY2024), and $55.8B (FY2025). As a share of free cash flow, shareholder returns were 88.5% (FY2023), 95.6% (FY2024), and 76.1% (FY2025). The FY2025 pullback reflects a deliberate redirection of capital toward infrastructure investment rather than a withdrawal of shareholder commitment.
+
+The buyback program has reduced the diluted share count consistently. Shares outstanding fell from 12.72B (FY2023) to 12.45B (FY2024, -2.1%) to 12.23B (FY2025, -1.8%), and the quarterly series confirms an unbroken downward trend from 12.76B (Q2 2023) to 12.23B (Q4 2025), a cumulative reduction of approximately 4.1% over roughly 2.5 years. This share count contraction accounts for a meaningful portion of EPS growth in excess of net income growth — at FY2025 EPS of $10.81 on net income of $132.2B, roughly 0.2–0.3 points of annual EPS growth can be attributed to the buyback alone.
+
+ROIC offers the clearest lens on whether the reallocation toward capex is generating incremental returns. It rose from 23.60% (FY2023) to 27.94% (FY2024) but dipped to 25.39% (FY2025). This pullback coincides precisely with the most intensive phase of capital deployment. Whether this represents a temporary lag between investment spend and return — a pattern common in large infrastructure build-outs — or a structural change in return profile is an open question the financial statements cannot resolve. Management's stated return hurdles and investment thesis in the MD&A are the appropriate reference for evaluating this trajectory.
+
+---
+
+## Summary
+
+Alphabet's three-year trajectory from FY2023 to FY2025 is defined by two overlapping and partially offsetting phases. The first — a profitability recovery through FY2024 — produced the most significant operational improvement in the dataset: revenue growth re-accelerated from 8.68% to 13.87%, operating margin expanded 469 bps to 32.11%, OCF-to-Net-Income remained solidly above 1.25x confirming earnings quality, and EPS surged 38.6%. The second phase — a capital-deployment escalation through FY2025 — left the top line growing at 15.09% with revenue momentum building into year-end, but consumed the profitability gains at the free cash flow level: capex more than doubled as a percentage of revenue (10.49% to 22.70%), FCF margin compressed from 22.61% to 18.19%, the net balance sheet position flipped from $9.3B net cash to $17.8B net debt, and ROIC declined modestly from a peak of 27.94%.
+
+The defining open question embedded in the FY2025 data is the return profile on Alphabet's unprecedented capital deployment. The H2 2025 YoY operating margin compression (Q3 down 180 bps, Q4 down 54 bps) and the ROIC pullback are early signals consistent with a front-loaded investment cycle, but the financial statements alone cannot determine whether these investments will sustain, improve, or structurally dilute Alphabet's return profile over the medium term. The counterpoint in the data is equally clear: revenue growth of 15.95%–18.00% in H2 2025 represents the strongest quarterly acceleration in the dataset, suggesting robust demand conditions entering this investment cycle. The interplay between that demand momentum and the capex build's eventual return contribution is the central financial narrative to track in subsequent periods.
+
+---
+
+> Generated by the analysis agent from SEC EDGAR XBRL data (2026-07-19T07:31:44Z). Every figure is traceable to a filing via the source_url column in data/tableau_export.csv.
+>
+> **Not investment advice:** this document is financial analysis only — no buy/sell/hold recommendations, price targets, or valuation calls.

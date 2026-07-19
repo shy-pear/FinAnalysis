@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-07-19T06:34:08Z",
-  "source": "sample",
-  "ticker": "NWD",
-  "row_count": 690,
+  "last_updated": "2026-07-19T07:28:48Z",
+  "source": "edgar",
+  "ticker": "GOOG",
+  "row_count": 411,
   "periods_covered": [
-    "2020-12-31",
-    "2025-09-30"
+    "2023-03-31",
+    "2025-12-31"
   ]
 }
