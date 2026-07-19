@@ -1,0 +1,6 @@
+claude-agent-sdk==0.2.122
+pandas==3.0.3
+plotly==6.9.0
+python-dotenv==1.2.2
+requests==2.34.2
+streamlit==1.59.2
