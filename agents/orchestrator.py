@@ -88,7 +88,7 @@ async def _build_edgar_dataframe(ticker: str, budget: Budget):
     cik, company = client.ticker_to_cik(ticker)
     submissions = client.submissions(cik)
     fye = submissions.get("fiscalYearEnd") or ""
-    filings = edgar.recent_filings_summary(submissions)
+    filings = edgar.recent_filings_summary(submissions, client=client)
     print(f"  CIK {cik} — {company}; fiscalYearEnd={fye!r}; "
           f"{len(filings)} recent 10-K/10-Q filings")
 

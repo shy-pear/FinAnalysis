@@ -107,20 +107,45 @@ def accession_url(cik: int, accession: str) -> str:
     )
 
 
-def recent_filings_summary(submissions: dict, max_filings: int = 60) -> list[dict]:
-    """Trim the submissions feed to 10-K/10-Q references for the research agent."""
-    recent = submissions.get("filings", {}).get("recent", {})
-    out = []
-    for form, accn, fdate, rdate in zip(
-        recent.get("form", []), recent.get("accessionNumber", []),
-        recent.get("filingDate", []), recent.get("reportDate", []),
-    ):
-        if form in ("10-K", "10-Q", "10-K/A", "10-Q/A"):
-            out.append({"form": form, "accession": accn,
-                        "filing_date": fdate, "period_end": rdate})
-        if len(out) >= max_filings:
-            break
-    return out
+FINANCIAL_FORMS = ("10-K", "10-Q", "10-K/A", "10-Q/A")
+
+
+def _extract_filings(block: dict) -> list[dict]:
+    return [
+        {"form": form, "accession": accn, "filing_date": fdate, "period_end": rdate}
+        for form, accn, fdate, rdate in zip(
+            block.get("form", []), block.get("accessionNumber", []),
+            block.get("filingDate", []), block.get("reportDate", []))
+        if form in FINANCIAL_FORMS
+    ]
+
+
+def recent_filings_summary(submissions: dict, client: EdgarClient | None = None,
+                           max_filings: int = 60, min_annuals: int = 5) -> list[dict]:
+    """10-K/10-Q references for the research agent, spanning >= 5 fiscal years.
+
+    The submissions feed's "recent" block holds only the company's last ~1000
+    filings of ALL form types, so heavy filers (e.g. Alphabet) may show fewer
+    than five years of financial reports there. Older filings live in paginated
+    archive files listed under filings.files — when a client is provided, pages
+    are fetched (free EDGAR calls) until min_annuals 10-Ks are visible or the
+    pages run out.
+    """
+    filings = _extract_filings(submissions.get("filings", {}).get("recent", {}))
+
+    def annuals(fs):
+        return sum(1 for f in fs if f["form"].startswith("10-K"))
+
+    if client is not None:
+        # Archive pages are ordered newest-first; each page's JSON holds the
+        # same column arrays at its top level (not nested under filings.recent).
+        for page in submissions.get("filings", {}).get("files", []):
+            if annuals(filings) >= min_annuals:
+                break
+            older = client.get_json(f"https://data.sec.gov/submissions/{page['name']}")
+            filings.extend(_extract_filings(older))
+
+    return filings[:max_filings]  # newest-first; cap keeps the research prompt small
 
 
 def filter_facts(companyfacts: dict, min_year: int) -> dict:
