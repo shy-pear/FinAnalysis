@@ -3,8 +3,12 @@
 Build specification. Read `CLAUDE.md` first for conventions and the data contract;
 this document defines *what to build*.
 
-Build in the six stages below, **in order**. After each stage, stop, show what was
+Build in the stages below, **in order**. After each stage, stop, show what was
 created, and wait for approval before continuing.
+
+Stages 1–3 build and debug against synthetic sample data so development costs
+nothing in API credit. **Stage 3b switches to real filings** and is where the system
+is proven against actual company data — the project is not done until that passes.
 
 ---
 
@@ -195,6 +199,50 @@ Runs the four agents in sequence. Requirements:
 **Acceptance:** `python agents/orchestrator.py --source sample` runs end-to-end and
 produces `financials.csv` plus analysis output.
 
+### Stage 3b — Real-ticker smoke test (do this before Stage 4)
+
+Before moving on, prove the pipeline works against **real** data. This is the step
+that catches extraction problems while extraction is still the thing in focus.
+
+Run:
+
+```
+python agents/orchestrator.py --source edgar --ticker AAPL
+```
+
+Then **manually verify** the output against the actual filing. Open the 10-K that
+`source_url` points to and check, at minimum:
+
+- **Revenue and Net Income** for the two most recent fiscal years match the filing
+  exactly. Not approximately — exactly.
+- **Units and scale are right.** Filings often report in thousands or millions;
+  confirm no factor-of-1000 errors. This is the most common extraction failure.
+- **Fiscal calendar is correct.** Apple's FY ends late September, not December.
+  Confirm `period`, `fiscal_year`, and `fiscal_quarter` align with the company's
+  actual fiscal calendar, not the calendar year.
+- **Quarterly rows are quarterly, not year-to-date.** Some XBRL facts are cumulative
+  YTD figures. Confirm Q3 means the three-month period, not nine months.
+- **No missing periods** across the 3–5 year window.
+- **Derived metrics reconcile** — gross profit, FCF, and margins recompute correctly
+  from their components.
+
+If anything is wrong, **edit `prompts/extraction_agent.md` and re-run.** Expect one
+or two rounds of this. XBRL tagging varies between companies — the same concept
+appears under different tags, restatements shift historical figures, and fiscal
+calendars differ. This iteration is normal and is why the role prompts are editable
+files rather than embedded strings.
+
+Keep costs contained: use a low `max_budget_usd`, rely on prompt caching for re-runs
+against the same filings, and run extraction on the cheap model.
+
+Once AAPL is clean, run **one more ticker with a different fiscal calendar and
+industry** (e.g. `MSFT`, FY ending June, or a retailer with a January year-end) to
+confirm the extraction generalizes rather than being tuned to a single company.
+
+**Acceptance:** two real tickers produce schema-valid output whose headline figures
+have been manually verified against the source filings, with `metadata.json` showing
+`"source": "edgar"`.
+
 ---
 
 ## Stage 4 — API key setup
@@ -352,6 +400,12 @@ fundamentals. Do not blend the two data sources in one table.
 
 - [ ] `python data/generate_sample_data.py` produces a schema-valid CSV
 - [ ] `python agents/orchestrator.py --source sample` runs end-to-end with no live API calls
+- [ ] **Two real tickers** (different fiscal calendars) produce schema-valid output
+      via `--source edgar`
+- [ ] **Headline figures manually verified** against the source filings — revenue and
+      net income match exactly, units and scale correct, fiscal periods correctly
+      labeled, quarterly rows are quarterly and not YTD
+- [ ] **The dashboard has been viewed with real data**, not only sample data
 - [ ] **All CSV reads/writes route through `data_access.py`** — grep for `read_csv`
       and `to_csv` returns hits in that file only
 - [ ] **`metadata.json` is written on every data write** with `last_updated` and `source`

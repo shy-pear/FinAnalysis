@@ -10,10 +10,11 @@ A single-company financial analysis system with two deliverables:
 The same CSV also feeds a manually built Tableau Public dashboard
 (see `docs/tableau_public_guide.md`).
 
-> **Synthetic data note:** the default dataset is generated sample data for a
-> fictional company (source: `sample` in `data/metadata.json`). It exists so the
-> whole system runs end-to-end with zero live API calls. Nothing in it describes
-> a real company.
+> **Synthetic data note:** the default dataset is generated sample data for
+> **Northwind Devices Inc. (Synthetic)**, ticker `NWD` — a fictional company
+> (source: `sample` in `data/metadata.json`). It exists so the whole system runs
+> end-to-end with zero live API calls. Nothing in it describes a real company,
+> and its `source_url` values point at example.com, not sec.gov.
 
 > **Not investment advice:** all output is financial analysis only — no buy/sell/hold
 > recommendations, price targets, or valuation calls.

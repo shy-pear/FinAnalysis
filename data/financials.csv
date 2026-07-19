@@ -1,0 +1,691 @@
+company,ticker,period,fiscal_year,fiscal_quarter,frequency,category,statement,metric,value,unit,source_url
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Capital Allocation,ratio,Capex as % of Revenue,5.48,%,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Capital Allocation,cash_flow,Dividends Paid,1286856696.0,USD,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Capital Allocation,cash_flow,Share Buybacks,2047609339.0,USD,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5224806898.0,shares,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Cash Generation,cash_flow,Capital Expenditures,1469700727.0,USD,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Cash Generation,ratio,FCF Margin,15.86,%,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Cash Generation,cash_flow,Free Cash Flow,4254211799.0,USD,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.29,x,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Cash Generation,cash_flow,Operating Cash Flow,5723912526.0,USD,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Financial Health & Solvency,balance_sheet,Cash & Equivalents,8590147118.0,USD,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Financial Health & Solvency,ratio,Current Ratio,1.45,x,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Financial Health & Solvency,ratio,Debt-to-Equity,0.48,x,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Financial Health & Solvency,ratio,Interest Coverage,22.7,x,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Financial Health & Solvency,balance_sheet,Net Debt,2209852882.0,USD,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Financial Health & Solvency,balance_sheet,Total Assets,48864571159.0,USD,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Financial Health & Solvency,balance_sheet,Total Debt,10800000000.0,USD,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Financial Health & Solvency,balance_sheet,Total Equity,22649011784.0,USD,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Growth,income_statement,EPS (Diluted),0.85,USD/share,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Growth,ratio,EPS YoY Growth %,37.1,%,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Growth,income_statement,Revenue,26817929294.0,USD,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Growth,ratio,Revenue YoY Growth %,25.06,%,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Profitability,ratio,Gross Margin,42.34,%,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Profitability,income_statement,Gross Profit,11354279994.0,USD,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Profitability,income_statement,Net Income,4439081810.0,USD,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Profitability,ratio,Net Margin,16.55,%,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Profitability,income_statement,Operating Income,5527621203.0,USD,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Profitability,ratio,Operating Margin,20.61,%,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Profitability,ratio,Return on Assets (ROA),9.24,%,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Profitability,ratio,Return on Equity (ROE),20.09,%,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,FY,Annual,Profitability,ratio,Return on Invested Capital (ROIC),14.11,%,https://example.com/synthetic/NWD/10-K-FY2021-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Capital Allocation,ratio,Capex as % of Revenue,5.4,%,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Capital Allocation,cash_flow,Dividends Paid,1384340793.0,USD,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Capital Allocation,cash_flow,Share Buybacks,2089270803.0,USD,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5192664270.0,shares,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Cash Generation,cash_flow,Capital Expenditures,1710579726.0,USD,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Cash Generation,ratio,FCF Margin,16.56,%,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Cash Generation,cash_flow,Free Cash Flow,5248202180.0,USD,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.25,x,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Cash Generation,cash_flow,Operating Cash Flow,6958781906.0,USD,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Financial Health & Solvency,balance_sheet,Cash & Equivalents,10231229803.0,USD,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Financial Health & Solvency,ratio,Current Ratio,1.54,x,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Financial Health & Solvency,ratio,Debt-to-Equity,0.41,x,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Financial Health & Solvency,ratio,Interest Coverage,28.2,x,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Financial Health & Solvency,balance_sheet,Net Debt,-31229803.0,USD,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Financial Health & Solvency,balance_sheet,Total Assets,53534359280.0,USD,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Financial Health & Solvency,balance_sheet,Total Debt,10200000000.0,USD,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Financial Health & Solvency,balance_sheet,Total Equity,24731361514.0,USD,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Growth,income_statement,EPS (Diluted),1.07,USD/share,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Growth,ratio,EPS YoY Growth %,25.88,%,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Growth,income_statement,Revenue,31699392972.0,USD,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Growth,ratio,Revenue YoY Growth %,18.2,%,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Profitability,ratio,Gross Margin,43.19,%,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Profitability,income_statement,Gross Profit,13689528477.0,USD,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Profitability,income_statement,Net Income,5555961327.0,USD,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Profitability,ratio,Net Margin,17.53,%,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Profitability,income_statement,Operating Income,6857239675.0,USD,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Profitability,ratio,Operating Margin,21.63,%,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Profitability,ratio,Return on Assets (ROA),10.85,%,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Profitability,ratio,Return on Equity (ROE),23.45,%,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,FY,Annual,Profitability,ratio,Return on Invested Capital (ROIC),16.85,%,https://example.com/synthetic/NWD/10-K-FY2022-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Capital Allocation,ratio,Capex as % of Revenue,5.38,%,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Capital Allocation,cash_flow,Dividends Paid,1488682813.0,USD,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Capital Allocation,cash_flow,Share Buybacks,2403767088.0,USD,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5155683238.0,shares,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Cash Generation,cash_flow,Capital Expenditures,1665498567.0,USD,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Cash Generation,ratio,FCF Margin,16.08,%,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Cash Generation,cash_flow,Free Cash Flow,4981876178.0,USD,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.16,x,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Cash Generation,cash_flow,Operating Cash Flow,6647374745.0,USD,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Financial Health & Solvency,balance_sheet,Cash & Equivalents,11276277969.0,USD,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Financial Health & Solvency,ratio,Current Ratio,1.58,x,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Financial Health & Solvency,ratio,Debt-to-Equity,0.36,x,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Financial Health & Solvency,ratio,Interest Coverage,30.6,x,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Financial Health & Solvency,balance_sheet,Net Debt,-1676277969.0,USD,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Financial Health & Solvency,balance_sheet,Total Assets,57554245435.0,USD,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Financial Health & Solvency,balance_sheet,Total Debt,9600000000.0,USD,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Financial Health & Solvency,balance_sheet,Total Equity,26550193520.0,USD,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Growth,income_statement,EPS (Diluted),1.11,USD/share,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Growth,ratio,EPS YoY Growth %,3.74,%,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Growth,income_statement,Revenue,30983591199.0,USD,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Growth,ratio,Revenue YoY Growth %,-2.26,%,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Profitability,ratio,Gross Margin,44.11,%,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Profitability,income_statement,Gross Profit,13668269579.0,USD,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Profitability,income_statement,Net Income,5711281906.0,USD,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Profitability,ratio,Net Margin,18.43,%,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Profitability,income_statement,Operating Income,7028645126.0,USD,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Profitability,ratio,Operating Margin,22.69,%,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Profitability,ratio,Return on Assets (ROA),10.28,%,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Profitability,ratio,Return on Equity (ROE),22.27,%,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,FY,Annual,Profitability,ratio,Return on Invested Capital (ROIC),16.61,%,https://example.com/synthetic/NWD/10-K-FY2023-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Capital Allocation,ratio,Capex as % of Revenue,5.34,%,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Capital Allocation,cash_flow,Dividends Paid,1599608740.0,USD,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Capital Allocation,cash_flow,Share Buybacks,2724467662.0,USD,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5113768351.0,shares,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Cash Generation,cash_flow,Capital Expenditures,1827670943.0,USD,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Cash Generation,ratio,FCF Margin,19.19,%,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Cash Generation,cash_flow,Free Cash Flow,6569010453.0,USD,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.28,x,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Cash Generation,cash_flow,Operating Cash Flow,8396681396.0,USD,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Financial Health & Solvency,balance_sheet,Cash & Equivalents,13105881436.0,USD,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Financial Health & Solvency,ratio,Current Ratio,1.66,x,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Financial Health & Solvency,ratio,Debt-to-Equity,0.31,x,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Financial Health & Solvency,ratio,Interest Coverage,37.2,x,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Financial Health & Solvency,balance_sheet,Net Debt,-4105881436.0,USD,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Financial Health & Solvency,balance_sheet,Total Assets,63285311110.0,USD,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Financial Health & Solvency,balance_sheet,Total Debt,9000000000.0,USD,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Financial Health & Solvency,balance_sheet,Total Equity,28790325878.0,USD,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Growth,income_statement,EPS (Diluted),1.28,USD/share,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Growth,ratio,EPS YoY Growth %,15.32,%,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Growth,income_statement,Revenue,34238040080.0,USD,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Growth,ratio,Revenue YoY Growth %,10.5,%,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Profitability,ratio,Gross Margin,44.7,%,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Profitability,income_statement,Gross Profit,15303407462.0,USD,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Profitability,income_statement,Net Income,6564208759.0,USD,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Profitability,ratio,Net Margin,19.17,%,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Profitability,income_statement,Operating Income,8030534237.0,USD,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Profitability,ratio,Operating Margin,23.46,%,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Profitability,ratio,Return on Assets (ROA),10.86,%,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Profitability,ratio,Return on Equity (ROE),23.72,%,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,FY,Annual,Profitability,ratio,Return on Invested Capital (ROIC),18.25,%,https://example.com/synthetic/NWD/10-K-FY2024-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Capital Allocation,ratio,Capex as % of Revenue,5.15,%,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Capital Allocation,cash_flow,Dividends Paid,1716490378.0,USD,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Capital Allocation,cash_flow,Share Buybacks,3123397301.0,USD,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5065716085.0,shares,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Cash Generation,cash_flow,Capital Expenditures,1999645123.0,USD,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Cash Generation,ratio,FCF Margin,21.44,%,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Cash Generation,cash_flow,Free Cash Flow,8321760438.0,USD,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.28,x,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Cash Generation,cash_flow,Operating Cash Flow,10321405561.0,USD,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Financial Health & Solvency,balance_sheet,Cash & Equivalents,16347268679.0,USD,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Financial Health & Solvency,ratio,Current Ratio,1.75,x,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Financial Health & Solvency,ratio,Debt-to-Equity,0.26,x,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Financial Health & Solvency,ratio,Interest Coverage,48.4,x,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Financial Health & Solvency,balance_sheet,Net Debt,-7947268679.0,USD,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Financial Health & Solvency,balance_sheet,Total Assets,70010969760.0,USD,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Financial Health & Solvency,balance_sheet,Total Debt,8400000000.0,USD,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Financial Health & Solvency,balance_sheet,Total Equity,32016386965.0,USD,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Growth,income_statement,EPS (Diluted),1.59,USD/share,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Growth,ratio,EPS YoY Growth %,24.22,%,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Growth,income_statement,Revenue,38815002674.0,USD,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Growth,ratio,Revenue YoY Growth %,13.37,%,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Profitability,ratio,Gross Margin,46.06,%,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Profitability,income_statement,Gross Profit,17879235965.0,USD,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Profitability,income_statement,Net Income,8065948767.0,USD,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Profitability,ratio,Net Margin,20.78,%,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Profitability,income_statement,Operating Income,9804819961.0,USD,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Profitability,ratio,Operating Margin,25.26,%,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Profitability,ratio,Return on Assets (ROA),12.1,%,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Profitability,ratio,Return on Equity (ROE),26.53,%,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,FY,Annual,Profitability,ratio,Return on Invested Capital (ROIC),21.06,%,https://example.com/synthetic/NWD/10-K-FY2025-FY
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Capital Allocation,ratio,Capex as % of Revenue,5.87,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Capital Allocation,cash_flow,Dividends Paid,312927860.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Capital Allocation,cash_flow,Share Buybacks,506071405.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5248522866.0,shares,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Cash Generation,cash_flow,Capital Expenditures,502862199.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Cash Generation,ratio,FCF Margin,15.63,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Cash Generation,cash_flow,Free Cash Flow,1338410247.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.29,x,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Cash Generation,cash_flow,Operating Cash Flow,1841272446.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Cash & Equivalents,8376245217.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Financial Health & Solvency,ratio,Current Ratio,1.5,x,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Financial Health & Solvency,ratio,Debt-to-Equity,0.49,x,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Financial Health & Solvency,ratio,Interest Coverage,28.9,x,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Net Debt,2423754783.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Total Assets,48379747333.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Total Debt,10800000000.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Total Equity,22149946240.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Growth,income_statement,EPS (Diluted),0.27,USD/share,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Growth,ratio,EPS YoY Growth %,35.0,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Growth,income_statement,Revenue,8564273439.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Growth,ratio,Revenue YoY Growth %,24.61,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Profitability,ratio,Gross Margin,42.01,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Profitability,income_statement,Gross Profit,3598188482.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Profitability,income_statement,Net Income,1424549496.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Profitability,ratio,Net Margin,16.63,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Profitability,income_statement,Operating Income,1756642257.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2020-12-31,2021,Q1,Quarterly,Profitability,ratio,Operating Margin,20.51,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Capital Allocation,ratio,Capex as % of Revenue,5.53,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Capital Allocation,cash_flow,Dividends Paid,318713634.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Capital Allocation,cash_flow,Share Buybacks,493877731.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5240924747.0,shares,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Cash Generation,cash_flow,Capital Expenditures,341997930.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Cash Generation,ratio,FCF Margin,16.09,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Cash Generation,cash_flow,Free Cash Flow,994649147.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.29,x,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Cash Generation,cash_flow,Operating Cash Flow,1336647077.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Cash & Equivalents,8652996232.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Financial Health & Solvency,ratio,Current Ratio,1.49,x,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Financial Health & Solvency,ratio,Debt-to-Equity,0.48,x,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Financial Health & Solvency,ratio,Interest Coverage,21.2,x,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Net Debt,2147003768.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Total Assets,48184513307.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Total Debt,10800000000.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Total Equity,22370355796.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Growth,income_statement,EPS (Diluted),0.2,USD/share,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Growth,ratio,EPS YoY Growth %,42.86,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Growth,income_statement,Revenue,6180175958.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Growth,ratio,Revenue YoY Growth %,26.86,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Profitability,ratio,Gross Margin,42.7,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Profitability,income_statement,Gross Profit,2638846851.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Profitability,income_statement,Net Income,1033000921.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Profitability,ratio,Net Margin,16.71,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Profitability,income_statement,Operating Income,1290513001.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-03-31,2021,Q2,Quarterly,Profitability,ratio,Operating Margin,20.88,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q2
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Capital Allocation,ratio,Capex as % of Revenue,5.07,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Capital Allocation,cash_flow,Dividends Paid,324617287.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Capital Allocation,cash_flow,Share Buybacks,526477361.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5232825095.0,shares,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Cash Generation,cash_flow,Capital Expenditures,283565847.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Cash Generation,ratio,FCF Margin,16.62,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Cash Generation,cash_flow,Free Cash Flow,929998598.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.33,x,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Cash Generation,cash_flow,Operating Cash Flow,1213564445.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Cash & Equivalents,8479469716.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Financial Health & Solvency,ratio,Current Ratio,1.51,x,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Financial Health & Solvency,ratio,Debt-to-Equity,0.48,x,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Financial Health & Solvency,ratio,Interest Coverage,18.8,x,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Net Debt,2320530284.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Total Assets,48760111563.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Total Debt,10800000000.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Total Equity,22428470447.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Growth,income_statement,EPS (Diluted),0.17,USD/share,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Growth,ratio,EPS YoY Growth %,30.77,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Growth,income_statement,Revenue,5596232912.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Growth,ratio,Revenue YoY Growth %,23.23,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Profitability,ratio,Gross Margin,42.09,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Profitability,income_statement,Gross Profit,2355703401.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Profitability,income_statement,Net Income,909209300.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Profitability,ratio,Net Margin,16.25,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Profitability,income_statement,Operating Income,1143142023.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-06-30,2021,Q3,Quarterly,Profitability,ratio,Operating Margin,20.43,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q3
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Capital Allocation,ratio,Capex as % of Revenue,5.27,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Capital Allocation,cash_flow,Dividends Paid,330597915.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Capital Allocation,cash_flow,Share Buybacks,521182842.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5224806898.0,shares,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Cash Generation,cash_flow,Capital Expenditures,341274750.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Cash Generation,ratio,FCF Margin,15.3,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Cash Generation,cash_flow,Free Cash Flow,991153809.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.24,x,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Cash Generation,cash_flow,Operating Cash Flow,1332428559.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Cash & Equivalents,8590147118.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Financial Health & Solvency,ratio,Current Ratio,1.45,x,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Financial Health & Solvency,ratio,Debt-to-Equity,0.48,x,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Financial Health & Solvency,ratio,Interest Coverage,22.0,x,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Net Debt,2209852882.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Total Assets,48864571159.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Total Debt,10800000000.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Total Equity,22649011784.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Growth,income_statement,EPS (Diluted),0.21,USD/share,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Growth,ratio,EPS YoY Growth %,40.0,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Growth,income_statement,Revenue,6477246984.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Growth,ratio,Revenue YoY Growth %,25.56,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Profitability,ratio,Gross Margin,42.63,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Profitability,income_statement,Gross Profit,2761541259.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Profitability,income_statement,Net Income,1072322094.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Profitability,ratio,Net Margin,16.56,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Profitability,income_statement,Operating Income,1337323922.0,USD,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-09-30,2021,Q4,Quarterly,Profitability,ratio,Operating Margin,20.65,%,https://example.com/synthetic/NWD/10-Q-FY2021-Q4
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Capital Allocation,ratio,Capex as % of Revenue,5.29,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Capital Allocation,cash_flow,Dividends Paid,336693171.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Capital Allocation,cash_flow,Share Buybacks,568878223.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5216054925.0,shares,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Cash Generation,cash_flow,Capital Expenditures,533679023.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Cash Generation,ratio,FCF Margin,17.83,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Cash Generation,cash_flow,Free Cash Flow,1799564708.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.29,x,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Cash Generation,cash_flow,Operating Cash Flow,2333243731.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Cash & Equivalents,9577978991.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Financial Health & Solvency,ratio,Current Ratio,1.57,x,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Financial Health & Solvency,ratio,Debt-to-Equity,0.46,x,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Financial Health & Solvency,ratio,Interest Coverage,36.3,x,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Net Debt,1222021009.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Total Assets,51206181968.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Total Debt,10800000000.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Total Equity,23545835130.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Growth,income_statement,EPS (Diluted),0.35,USD/share,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Growth,ratio,EPS YoY Growth %,29.63,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Growth,income_statement,Revenue,10095370773.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Growth,ratio,Revenue YoY Growth %,17.88,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Profitability,ratio,Gross Margin,43.4,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Profitability,income_statement,Gross Profit,4381276262.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Profitability,income_statement,Net Income,1802394740.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Profitability,ratio,Net Margin,17.85,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Profitability,income_statement,Operating Income,2206458024.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2021-12-31,2022,Q1,Quarterly,Profitability,ratio,Operating Margin,21.86,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Capital Allocation,ratio,Capex as % of Revenue,5.74,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Capital Allocation,cash_flow,Dividends Paid,342851766.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Capital Allocation,cash_flow,Share Buybacks,533713469.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5207843949.0,shares,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Cash Generation,cash_flow,Capital Expenditures,418052362.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Cash Generation,ratio,FCF Margin,15.26,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Cash Generation,cash_flow,Free Cash Flow,1110842569.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.2,x,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Cash Generation,cash_flow,Operating Cash Flow,1528894931.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Cash & Equivalents,9814130443.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Financial Health & Solvency,ratio,Current Ratio,1.57,x,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Financial Health & Solvency,ratio,Debt-to-Equity,0.45,x,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Financial Health & Solvency,ratio,Interest Coverage,26.0,x,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Net Debt,985869557.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Total Assets,52388318103.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Total Debt,10800000000.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Total Equity,23943128183.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Growth,income_statement,EPS (Diluted),0.24,USD/share,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Growth,ratio,EPS YoY Growth %,20.0,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Growth,income_statement,Revenue,7278721392.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Growth,ratio,Revenue YoY Growth %,17.78,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Profitability,ratio,Gross Margin,43.05,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Profitability,income_statement,Gross Profit,3133837370.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Profitability,income_statement,Net Income,1273858288.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Profitability,ratio,Net Margin,17.5,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Profitability,income_statement,Operating Income,1577247962.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-03-31,2022,Q2,Quarterly,Profitability,ratio,Operating Margin,21.67,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q2
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Capital Allocation,ratio,Capex as % of Revenue,4.66,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Capital Allocation,cash_flow,Dividends Paid,349158299.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Capital Allocation,cash_flow,Share Buybacks,478961702.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5200475307.0,shares,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Cash Generation,cash_flow,Capital Expenditures,314418358.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Cash Generation,ratio,FCF Margin,17.38,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Cash Generation,cash_flow,Free Cash Flow,1173684748.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.26,x,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Cash Generation,cash_flow,Operating Cash Flow,1488103106.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Cash & Equivalents,9961290248.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Financial Health & Solvency,ratio,Current Ratio,1.57,x,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Financial Health & Solvency,ratio,Debt-to-Equity,0.44,x,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Financial Health & Solvency,ratio,Interest Coverage,24.2,x,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Net Debt,838709752.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Total Assets,52574644250.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Total Debt,10800000000.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Total Equity,24299790358.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Growth,income_statement,EPS (Diluted),0.23,USD/share,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Growth,ratio,EPS YoY Growth %,35.29,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Growth,income_statement,Revenue,6752488978.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Growth,ratio,Revenue YoY Growth %,20.66,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Profitability,ratio,Gross Margin,43.16,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Profitability,income_statement,Gross Profit,2914415150.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Profitability,income_statement,Net Income,1184782176.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Profitability,ratio,Net Margin,17.55,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Profitability,income_statement,Operating Income,1471204971.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-06-30,2022,Q3,Quarterly,Profitability,ratio,Operating Margin,21.79,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q3
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Capital Allocation,ratio,Capex as % of Revenue,5.87,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Capital Allocation,cash_flow,Dividends Paid,355637556.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Capital Allocation,cash_flow,Share Buybacks,507717410.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5192664270.0,shares,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Cash Generation,cash_flow,Capital Expenditures,444429984.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Cash Generation,ratio,FCF Margin,15.37,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Cash Generation,cash_flow,Free Cash Flow,1164110154.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.24,x,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Cash Generation,cash_flow,Operating Cash Flow,1608540138.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Cash & Equivalents,10231229803.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Financial Health & Solvency,ratio,Current Ratio,1.54,x,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Financial Health & Solvency,ratio,Debt-to-Equity,0.41,x,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Financial Health & Solvency,ratio,Interest Coverage,26.4,x,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Net Debt,-31229803.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Total Assets,53534359280.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Total Debt,10200000000.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Total Equity,24731361514.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Growth,income_statement,EPS (Diluted),0.25,USD/share,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Growth,ratio,EPS YoY Growth %,19.05,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Growth,income_statement,Revenue,7572811828.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Growth,ratio,Revenue YoY Growth %,16.91,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Profitability,ratio,Gross Margin,43.05,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Profitability,income_statement,Gross Profit,3259999694.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Profitability,income_statement,Net Income,1294926122.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Profitability,ratio,Net Margin,17.1,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Profitability,income_statement,Operating Income,1602328717.0,USD,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-09-30,2022,Q4,Quarterly,Profitability,ratio,Operating Margin,21.16,%,https://example.com/synthetic/NWD/10-Q-FY2022-Q4
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Capital Allocation,ratio,Capex as % of Revenue,5.2,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Capital Allocation,cash_flow,Dividends Paid,362205462.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Capital Allocation,cash_flow,Share Buybacks,547452297.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5184241927.0,shares,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Cash Generation,cash_flow,Capital Expenditures,519652938.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Cash Generation,ratio,FCF Margin,17.67,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Cash Generation,cash_flow,Free Cash Flow,1764337897.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.27,x,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Cash Generation,cash_flow,Operating Cash Flow,2283990835.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Cash & Equivalents,11096729367.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Financial Health & Solvency,ratio,Current Ratio,1.61,x,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Financial Health & Solvency,ratio,Debt-to-Equity,0.4,x,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Financial Health & Solvency,ratio,Interest Coverage,38.3,x,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Net Debt,-896729367.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Total Assets,55634252359.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Total Debt,10200000000.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Total Equity,25617453873.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Growth,income_statement,EPS (Diluted),0.35,USD/share,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Growth,ratio,EPS YoY Growth %,0.0,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Growth,income_statement,Revenue,9987707602.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Growth,ratio,Revenue YoY Growth %,-1.07,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Profitability,ratio,Gross Margin,43.36,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Profitability,income_statement,Gross Profit,4330577314.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Profitability,income_statement,Net Income,1795750118.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Profitability,ratio,Net Margin,17.98,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Profitability,income_statement,Operating Income,2195172759.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2022-12-31,2023,Q1,Quarterly,Profitability,ratio,Operating Margin,21.98,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Capital Allocation,ratio,Capex as % of Revenue,5.61,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Capital Allocation,cash_flow,Dividends Paid,368850335.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Capital Allocation,cash_flow,Share Buybacks,726988005.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5173057496.0,shares,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Cash Generation,cash_flow,Capital Expenditures,398807132.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Cash Generation,ratio,FCF Margin,14.33,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Cash Generation,cash_flow,Free Cash Flow,1018560843.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.05,x,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Cash Generation,cash_flow,Operating Cash Flow,1417367975.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Cash & Equivalents,11144718556.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Financial Health & Solvency,ratio,Current Ratio,1.66,x,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Financial Health & Solvency,ratio,Debt-to-Equity,0.39,x,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Financial Health & Solvency,ratio,Interest Coverage,29.1,x,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Net Debt,-944718556.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Total Assets,56555606286.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Total Debt,10200000000.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Total Equity,25877457735.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Growth,income_statement,EPS (Diluted),0.26,USD/share,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Growth,ratio,EPS YoY Growth %,8.33,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Growth,income_statement,Revenue,7108863638.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Growth,ratio,Revenue YoY Growth %,-2.33,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Profitability,ratio,Gross Margin,44.69,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Profitability,income_statement,Gross Profit,3177001744.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Profitability,income_statement,Net Income,1355842202.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Profitability,ratio,Net Margin,19.07,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Profitability,income_statement,Operating Income,1671472860.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-03-31,2023,Q2,Quarterly,Profitability,ratio,Operating Margin,23.51,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q2
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Capital Allocation,ratio,Capex as % of Revenue,5.82,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Capital Allocation,cash_flow,Dividends Paid,375415673.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Capital Allocation,cash_flow,Share Buybacks,625777747.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5163430146.0,shares,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Cash Generation,cash_flow,Capital Expenditures,372117341.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Cash Generation,ratio,FCF Margin,12.58,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Cash Generation,cash_flow,Free Cash Flow,804386387.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.0,x,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Cash Generation,cash_flow,Operating Cash Flow,1176503728.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Cash & Equivalents,10727290579.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Financial Health & Solvency,ratio,Current Ratio,1.61,x,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Financial Health & Solvency,ratio,Debt-to-Equity,0.39,x,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Financial Health & Solvency,ratio,Interest Coverage,25.4,x,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Net Debt,-527290579.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Total Assets,56392142756.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Total Debt,10200000000.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Total Equity,26054300178.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Growth,income_statement,EPS (Diluted),0.23,USD/share,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Growth,ratio,EPS YoY Growth %,0.0,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Growth,income_statement,Revenue,6396433398.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Growth,ratio,Revenue YoY Growth %,-5.27,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Profitability,ratio,Gross Margin,43.79,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Profitability,income_statement,Gross Profit,2801260400.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Profitability,income_statement,Net Income,1178035863.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Profitability,ratio,Net Margin,18.42,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Profitability,income_statement,Operating Income,1459798646.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-06-30,2023,Q3,Quarterly,Profitability,ratio,Operating Margin,22.82,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q3
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Capital Allocation,ratio,Capex as % of Revenue,5.01,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Capital Allocation,cash_flow,Dividends Paid,382211343.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Capital Allocation,cash_flow,Share Buybacks,503549038.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5155683238.0,shares,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Cash Generation,cash_flow,Capital Expenditures,374921156.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Cash Generation,ratio,FCF Margin,18.62,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Cash Generation,cash_flow,Free Cash Flow,1394591052.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.28,x,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Cash Generation,cash_flow,Operating Cash Flow,1769512208.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Cash & Equivalents,11276277969.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Financial Health & Solvency,ratio,Current Ratio,1.58,x,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Financial Health & Solvency,ratio,Debt-to-Equity,0.36,x,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Financial Health & Solvency,ratio,Interest Coverage,29.7,x,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Net Debt,-1676277969.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Total Assets,57554245435.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Total Debt,9600000000.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Total Equity,26550193520.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Growth,income_statement,EPS (Diluted),0.27,USD/share,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Growth,ratio,EPS YoY Growth %,8.0,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Growth,income_statement,Revenue,7490586560.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Growth,ratio,Revenue YoY Growth %,-1.09,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Profitability,ratio,Gross Margin,44.85,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Profitability,income_statement,Gross Profit,3359430122.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Profitability,income_statement,Net Income,1381653723.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Profitability,ratio,Net Margin,18.45,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Profitability,income_statement,Operating Income,1702200861.0,USD,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-09-30,2023,Q4,Quarterly,Profitability,ratio,Operating Margin,22.72,%,https://example.com/synthetic/NWD/10-Q-FY2023-Q4
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Capital Allocation,ratio,Capex as % of Revenue,5.42,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Capital Allocation,cash_flow,Dividends Paid,389270654.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Capital Allocation,cash_flow,Share Buybacks,645432930.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5145753501.0,shares,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Cash Generation,cash_flow,Capital Expenditures,588882062.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Cash Generation,ratio,FCF Margin,19.1,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Cash Generation,cash_flow,Free Cash Flow,2075253127.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.27,x,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Cash Generation,cash_flow,Operating Cash Flow,2664135189.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Cash & Equivalents,12065625071.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Financial Health & Solvency,ratio,Current Ratio,1.65,x,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Financial Health & Solvency,ratio,Debt-to-Equity,0.35,x,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Financial Health & Solvency,ratio,Interest Coverage,47.3,x,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Net Debt,-2465625071.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Total Assets,60010073536.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Total Debt,9600000000.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Total Equity,27616787477.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Growth,income_statement,EPS (Diluted),0.41,USD/share,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Growth,ratio,EPS YoY Growth %,17.14,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Growth,income_statement,Revenue,10863614552.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Growth,ratio,Revenue YoY Growth %,8.77,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Profitability,ratio,Gross Margin,44.84,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Profitability,income_statement,Gross Profit,4871644942.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Profitability,income_statement,Net Income,2101297541.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Profitability,ratio,Net Margin,19.34,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Profitability,income_statement,Operating Income,2555544691.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2023-12-31,2024,Q1,Quarterly,Profitability,ratio,Operating Margin,23.52,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Capital Allocation,ratio,Capex as % of Revenue,4.91,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Capital Allocation,cash_flow,Dividends Paid,396291345.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Capital Allocation,cash_flow,Share Buybacks,650511593.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5135745630.0,shares,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Cash Generation,cash_flow,Capital Expenditures,394215768.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Cash Generation,ratio,FCF Margin,18.94,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Cash Generation,cash_flow,Free Cash Flow,1521253948.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.24,x,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Cash Generation,cash_flow,Operating Cash Flow,1915469716.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Cash & Equivalents,12431292172.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Financial Health & Solvency,ratio,Current Ratio,1.62,x,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Financial Health & Solvency,ratio,Debt-to-Equity,0.34,x,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Financial Health & Solvency,ratio,Interest Coverage,35.2,x,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Net Debt,-2831292172.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Total Assets,62155010787.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Total Debt,9600000000.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Total Equity,28120927933.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Growth,income_statement,EPS (Diluted),0.3,USD/share,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Growth,ratio,EPS YoY Growth %,15.38,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Growth,income_statement,Revenue,8032878440.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Growth,ratio,Revenue YoY Growth %,13.0,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Profitability,ratio,Gross Margin,44.95,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Profitability,income_statement,Gross Profit,3610948337.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Profitability,income_statement,Net Income,1550943394.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Profitability,ratio,Net Margin,19.31,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Profitability,income_statement,Operating Income,1900361184.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-03-31,2024,Q2,Quarterly,Profitability,ratio,Operating Margin,23.66,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q2
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Capital Allocation,ratio,Capex as % of Revenue,5.42,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Capital Allocation,cash_flow,Dividends Paid,403431018.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Capital Allocation,cash_flow,Share Buybacks,717065098.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5124713859.0,shares,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Cash Generation,cash_flow,Capital Expenditures,393303076.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Cash Generation,ratio,FCF Margin,18.77,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Cash Generation,cash_flow,Free Cash Flow,1361783648.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.28,x,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Cash Generation,cash_flow,Operating Cash Flow,1755086724.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Cash & Equivalents,12574361549.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Financial Health & Solvency,ratio,Current Ratio,1.63,x,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Financial Health & Solvency,ratio,Debt-to-Equity,0.34,x,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Financial Health & Solvency,ratio,Interest Coverage,31.2,x,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Net Debt,-2974361549.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Total Assets,62030260521.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Total Debt,9600000000.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Total Equity,28372399835.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Growth,income_statement,EPS (Diluted),0.27,USD/share,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Growth,ratio,EPS YoY Growth %,17.39,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Growth,income_statement,Revenue,7254264354.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Growth,ratio,Revenue YoY Growth %,13.41,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Profitability,ratio,Gross Margin,44.54,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Profitability,income_statement,Gross Profit,3230964405.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Profitability,income_statement,Net Income,1371968018.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Profitability,ratio,Net Margin,18.91,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Profitability,income_statement,Operating Income,1687295260.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-06-30,2024,Q3,Quarterly,Profitability,ratio,Operating Margin,23.26,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q3
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Capital Allocation,ratio,Capex as % of Revenue,5.58,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Capital Allocation,cash_flow,Dividends Paid,410615722.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Capital Allocation,cash_flow,Share Buybacks,711458041.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5113768351.0,shares,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Cash Generation,cash_flow,Capital Expenditures,451270037.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Cash Generation,ratio,FCF Margin,19.92,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Cash Generation,cash_flow,Free Cash Flow,1610719729.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.34,x,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Cash Generation,cash_flow,Operating Cash Flow,2061989766.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Cash & Equivalents,13105881436.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Financial Health & Solvency,ratio,Current Ratio,1.66,x,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Financial Health & Solvency,ratio,Debt-to-Equity,0.31,x,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Financial Health & Solvency,ratio,Interest Coverage,35.0,x,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Net Debt,-4105881436.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Total Assets,63285311110.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Total Debt,9000000000.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Total Equity,28790325878.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Growth,income_statement,EPS (Diluted),0.3,USD/share,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Growth,ratio,EPS YoY Growth %,11.11,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Growth,income_statement,Revenue,8087282735.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Growth,ratio,Revenue YoY Growth %,7.97,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Profitability,ratio,Gross Margin,44.39,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Profitability,income_statement,Gross Profit,3589849778.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Profitability,income_statement,Net Income,1539999806.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Profitability,ratio,Net Margin,19.04,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Profitability,income_statement,Operating Income,1887333102.0,USD,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-09-30,2024,Q4,Quarterly,Profitability,ratio,Operating Margin,23.34,%,https://example.com/synthetic/NWD/10-Q-FY2024-Q4
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Capital Allocation,ratio,Capex as % of Revenue,5.59,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Capital Allocation,cash_flow,Dividends Paid,417933492.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Capital Allocation,cash_flow,Share Buybacks,702042477.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5102967697.0,shares,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Cash Generation,cash_flow,Capital Expenditures,692612228.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Cash Generation,ratio,FCF Margin,22.37,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Cash Generation,cash_flow,Free Cash Flow,2771438062.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.34,x,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Cash Generation,cash_flow,Operating Cash Flow,3464050290.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Cash & Equivalents,14552119648.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Financial Health & Solvency,ratio,Current Ratio,1.77,x,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Financial Health & Solvency,ratio,Debt-to-Equity,0.3,x,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Financial Health & Solvency,ratio,Interest Coverage,61.9,x,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Net Debt,-5552119648.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Total Assets,66630820262.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Total Debt,9000000000.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Total Equity,30261673894.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Growth,income_statement,EPS (Diluted),0.51,USD/share,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Growth,ratio,EPS YoY Growth %,24.39,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Growth,income_statement,Revenue,12386617334.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Growth,ratio,Revenue YoY Growth %,14.02,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Profitability,ratio,Gross Margin,46.19,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Profitability,income_statement,Gross Profit,5721690130.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Profitability,income_statement,Net Income,2591323986.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Profitability,ratio,Net Margin,20.92,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Profitability,income_statement,Operating Income,3135534507.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2024-12-31,2025,Q1,Quarterly,Profitability,ratio,Operating Margin,25.31,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q1
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Capital Allocation,ratio,Capex as % of Revenue,5.05,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Capital Allocation,cash_flow,Dividends Paid,425391802.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Capital Allocation,cash_flow,Share Buybacks,851466144.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5089868218.0,shares,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Cash Generation,cash_flow,Capital Expenditures,451085547.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Cash Generation,ratio,FCF Margin,19.07,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Cash Generation,cash_flow,Free Cash Flow,1702732493.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.2,x,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Cash Generation,cash_flow,Operating Cash Flow,2153818040.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Cash & Equivalents,14918803428.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Financial Health & Solvency,ratio,Current Ratio,1.69,x,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Financial Health & Solvency,ratio,Debt-to-Equity,0.29,x,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Financial Health & Solvency,ratio,Interest Coverage,43.0,x,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Net Debt,-5918803428.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Total Assets,67082523396.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Total Debt,9000000000.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Total Equity,30772739515.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Growth,income_statement,EPS (Diluted),0.35,USD/share,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Growth,ratio,EPS YoY Growth %,16.67,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Growth,income_statement,Revenue,8927726099.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Growth,ratio,Revenue YoY Growth %,11.14,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Profitability,ratio,Gross Margin,45.6,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Profitability,income_statement,Gross Profit,4070750725.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Profitability,income_statement,Net Income,1787923566.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Profitability,ratio,Net Margin,20.03,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Profitability,income_statement,Operating Income,2179105436.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-03-31,2025,Q2,Quarterly,Profitability,ratio,Operating Margin,24.41,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q2
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Capital Allocation,ratio,Capex as % of Revenue,4.47,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Capital Allocation,cash_flow,Dividends Paid,432785804.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Capital Allocation,cash_flow,Share Buybacks,796102528.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5077620487.0,shares,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Cash Generation,cash_flow,Capital Expenditures,367036548.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Cash Generation,ratio,FCF Margin,22.57,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Cash Generation,cash_flow,Free Cash Flow,1851446929.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.29,x,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Cash Generation,cash_flow,Operating Cash Flow,2218483477.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Cash & Equivalents,15414877485.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Financial Health & Solvency,ratio,Current Ratio,1.66,x,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Financial Health & Solvency,ratio,Debt-to-Equity,0.29,x,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Financial Health & Solvency,ratio,Interest Coverage,41.4,x,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Net Debt,-6414877485.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Total Assets,67660761452.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Total Debt,9000000000.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Financial Health & Solvency,balance_sheet,Total Equity,31260681961.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Growth,income_statement,EPS (Diluted),0.34,USD/share,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Growth,ratio,EPS YoY Growth %,25.93,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Growth,income_statement,Revenue,8202091758.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Growth,ratio,Revenue YoY Growth %,13.07,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Profitability,ratio,Gross Margin,46.31,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Profitability,income_statement,Gross Profit,3798634161.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Profitability,income_statement,Net Income,1716830778.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Profitability,ratio,Net Margin,20.93,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Profitability,income_statement,Operating Income,2094471164.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-06-30,2025,Q3,Quarterly,Profitability,ratio,Operating Margin,25.54,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q3
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Capital Allocation,ratio,Capex as % of Revenue,5.26,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Capital Allocation,cash_flow,Dividends Paid,440379281.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Capital Allocation,cash_flow,Share Buybacks,773786152.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),5065716085.0,shares,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Cash Generation,cash_flow,Capital Expenditures,488910801.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Cash Generation,ratio,FCF Margin,21.47,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Cash Generation,cash_flow,Free Cash Flow,1996142953.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.26,x,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Cash Generation,cash_flow,Operating Cash Flow,2485053754.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Cash & Equivalents,16347268679.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Financial Health & Solvency,ratio,Current Ratio,1.75,x,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Financial Health & Solvency,ratio,Debt-to-Equity,0.26,x,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Financial Health & Solvency,ratio,Interest Coverage,47.3,x,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Net Debt,-7947268679.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Total Assets,70010969760.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Total Debt,8400000000.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Financial Health & Solvency,balance_sheet,Total Equity,32016386965.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Growth,income_statement,EPS (Diluted),0.39,USD/share,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Growth,ratio,EPS YoY Growth %,30.0,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Growth,income_statement,Revenue,9298567483.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Growth,ratio,Revenue YoY Growth %,14.98,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Profitability,ratio,Gross Margin,46.12,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Profitability,income_statement,Gross Profit,4288160950.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Profitability,income_statement,Net Income,1969870437.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Profitability,ratio,Net Margin,21.18,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Profitability,income_statement,Operating Income,2395708854.0,USD,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
+Northwind Devices Inc. (Synthetic),NWD,2025-09-30,2025,Q4,Quarterly,Profitability,ratio,Operating Margin,25.76,%,https://example.com/synthetic/NWD/10-Q-FY2025-Q4
