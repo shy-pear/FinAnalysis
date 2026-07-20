@@ -388,16 +388,19 @@ with tab_capital:
     left, right = st.columns(2)
     with left:
         # Payout sustainability: what share of profits/FCF goes back to holders?
+        # Always computed on ANNUAL figures — single-quarter payout ratios are
+        # seasonal noise (steady dividends ÷ a seasonal FCF quarter misleads).
+        aw_pay = wide(annual_all)
         payout = []
-        if {"Dividends Paid", "Net Income"} <= set(w.columns):
-            dp = (100 * w["Dividends Paid"] / w["Net Income"]).dropna()
+        if {"Dividends Paid", "Net Income"} <= set(aw_pay.columns):
+            dp = (100 * aw_pay["Dividends Paid"] / aw_pay["Net Income"]).dropna()
             payout.append(computed(dp.index, dp.values, "Dividends ÷ Net Income", "%"))
-        if {"Dividends Paid", "Share Buybacks", "Free Cash Flow"} <= set(w.columns):
-            tp = (100 * (w["Dividends Paid"].fillna(0) + w["Share Buybacks"].fillna(0))
-                  / w["Free Cash Flow"]).dropna()
+        if {"Dividends Paid", "Share Buybacks", "Free Cash Flow"} <= set(aw_pay.columns):
+            tp = (100 * (aw_pay["Dividends Paid"].fillna(0) + aw_pay["Share Buybacks"].fillna(0))
+                  / aw_pay["Free Cash Flow"]).dropna()
             payout.append(computed(tp.index, tp.values, "(Dividends + Buybacks) ÷ FCF", "%"))
         if payout:
-            chart(payout, "Payout ratios", "%")
+            chart(payout, "Payout ratios (annual — 100% = all FCF returned)", "%")
     with right:
         # Where every operating dollar went
         deploy = [trace(m, kind="bar") for m in
