@@ -135,7 +135,8 @@ def labels_for(idx, frame: pd.DataFrame | None = None) -> list[str]:
 def hover(name: str, unit: str) -> str:
     """Tooltip template incl. the source filing URL for auditability."""
     val = "%{y:.2f}" if unit in ("%", "x", "USD/share") else "%{y:,.0f}"
-    return (f"<b>{name}</b><br>%{{x}}<br>{val} {unit}"
+    shown = "×" if unit == "x" else unit  # '29.1×', not a stray letter x
+    return (f"<b>{name}</b><br>%{{x}}<br>{val} {shown}"
             "<br>source: %{customdata}<extra></extra>")
 
 
@@ -361,7 +362,7 @@ if section == "2 · Profitability":
             leverage = (aw["Total Assets"] / aw["Total Equity"]).dropna()
             chart([computed(aw.index, aw["Net Margin"], "Net Margin", "%", frame=annual_all)],
                   "DuPont decomposition of ROE (annual)", "Net Margin %",
-                  y2="Turnover / Leverage (x)",
+                  y2="Turnover / Leverage",
                   secondary=[computed(turnover.index, turnover.values, "Asset Turnover", "x", frame=annual_all),
                              computed(leverage.index, leverage.values, "Equity Multiplier", "x", frame=annual_all)])
     if trace("Effective Tax Rate") is not None:
@@ -384,7 +385,7 @@ if section == "3 · Cash Generation":
     with left:
         chart([trace("OCF-to-Net-Income Ratio")],
               "OCF ÷ Net Income (≈1 means profits are backed by cash)",
-              "Ratio (multiples)")
+              "Ratio")
     with right:
         # Can the shareholder-return program be funded from free cash flow?
         # Cumulative sums need every quarter — hidden in single-quarter mode.
@@ -406,8 +407,8 @@ if section == "4 · Financial Health & Solvency":
     with right:
         chart([trace("Current Ratio"), trace("Debt-to-Equity"),
                trace("Net Debt to EBITDA")],
-              "Liquidity & leverage", "Ratio (multiples)",
-              y2="Interest Coverage (x)", secondary=[trace("Interest Coverage")])
+              "Liquidity & leverage", "Ratio",
+              y2="Interest Coverage", secondary=[trace("Interest Coverage")])
     equity_ratio = None
     if {"Total Equity", "Total Assets"} <= set(w.columns):
         er = (100 * w["Total Equity"] / w["Total Assets"]).dropna()
