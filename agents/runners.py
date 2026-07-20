@@ -78,14 +78,27 @@ async def call_agent(role: str, user_prompt: str, model: str,
 
 
 def parse_json_response(role: str, text: str) -> dict:
-    """Parse strict-JSON agent output, tolerating a stray markdown fence."""
+    """Parse strict-JSON agent output, tolerating fences and stray prose.
+
+    Prompts demand raw JSON, but models occasionally wrap it in a markdown
+    fence or append commentary anyway. Recover the first balanced JSON object
+    rather than failing a run whose (paid) agent call already succeeded.
+    """
     cleaned = text.strip()
     if cleaned.startswith("```"):
         cleaned = re.sub(r"^```[a-z]*\n|\n```$", "", cleaned, flags=re.MULTILINE).strip()
     try:
         return json.loads(cleaned)
-    except json.JSONDecodeError as e:
-        raise AgentError(f"{role} did not return valid JSON: {e}\n--- output ---\n{text[:2000]}")
+    except json.JSONDecodeError:
+        start = cleaned.find("{")
+        if start != -1:
+            try:
+                obj, _ = json.JSONDecoder().raw_decode(cleaned[start:])
+                if isinstance(obj, dict):
+                    return obj
+            except json.JSONDecodeError:
+                pass
+        raise AgentError(f"{role} did not return valid JSON.\n--- output ---\n{text[:2000]}")
 
 
 # ── Validation: deterministic checks (code, not model) ─────────────────────
