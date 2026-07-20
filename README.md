@@ -40,6 +40,9 @@ python agents/orchestrator.py --source sample
 # Run against live SEC EDGAR data for a real ticker
 python agents/orchestrator.py --source edgar --ticker AAPL
 
+# Switch the dashboard back to an already-run company (free, offline, no API key)
+python agents/orchestrator.py --restore GOOG
+
 # Launch the dashboard
 streamlit run dashboard/app.py
 ```
