@@ -111,10 +111,23 @@ def series(metric: str, frame: pd.DataFrame | None = None) -> pd.DataFrame:
     return frame[frame["metric"] == metric].sort_values("period")
 
 
+def plabel(fy, fq) -> str:
+    """Fiscal-period axis label. 'FY2025 Q1' sorts lexically == chronologically."""
+    return f"FY{fy}" if fq == "FY" else f"FY{fy} {fq}"
+
+
+def labels_for(idx, frame: pd.DataFrame | None = None) -> list[str]:
+    """Map period timestamps to fiscal labels using the given frame's rows."""
+    frame = df if frame is None else frame
+    m = {p: plabel(y, q) for p, y, q in zip(frame["period"], frame["fiscal_year"],
+                                            frame["fiscal_quarter"])}
+    return [m.get(p, str(p)) for p in idx]
+
+
 def hover(name: str, unit: str) -> str:
     """Tooltip template incl. the source filing URL for auditability."""
     val = "%{y:.2f}" if unit in ("%", "x", "USD/share") else "%{y:,.0f}"
-    return (f"<b>{name}</b><br>%{{x|%Y-%m-%d}}<br>{val} {unit}"
+    return (f"<b>{name}</b><br>%{{x}}<br>{val} {unit}"
             "<br>source: %{customdata}<extra></extra>")
 
 
@@ -125,7 +138,8 @@ def trace(metric: str, name: str | None = None, kind: str = "line",
         return None
     name = name or metric
     unit = s["unit"].iloc[0]
-    common = dict(x=s["period"], y=s["value"], name=name,
+    labels = [plabel(y, q) for y, q in zip(s["fiscal_year"], s["fiscal_quarter"])]
+    common = dict(x=labels, y=s["value"], name=name,
                   customdata=s["source_url"], hovertemplate=hover(name, unit))
     return go.Bar(**common) if kind == "bar" else go.Scatter(mode="lines+markers", **common)
 
@@ -147,6 +161,8 @@ def chart(traces, title: str, y1: str = "", y2: str | None = None,
     fig.update_yaxes(title_text=y1, secondary_y=False)
     if y2 is not None:
         fig.update_yaxes(title_text=y2, secondary_y=True)
+    # Fiscal-period labels, chronological: 'FY2025 Q1' sorts correctly as text
+    fig.update_xaxes(type="category", categoryorder="category ascending")
     for a in annotations or []:
         fig.add_annotation(**a)
     st.plotly_chart(fig, width="stretch")
@@ -159,11 +175,12 @@ def wide(frame: pd.DataFrame | None = None) -> pd.DataFrame:
                              values="value", aggfunc="first").sort_index()
 
 
-def computed(x, y, name: str, unit: str, kind: str = "line"):
+def computed(x, y, name: str, unit: str, kind: str = "line",
+             frame: pd.DataFrame | None = None):
     """Trace for a ratio derived in the dashboard from reported metrics."""
-    ht = (f"<b>{name}</b><br>%{{x|%Y-%m-%d}}<br>%{{y:,.2f}} {unit}"
+    ht = (f"<b>{name}</b><br>%{{x}}<br>%{{y:,.2f}} {unit}"
           "<br><i>computed from reported metrics</i><extra></extra>")
-    common = dict(x=x, y=y, name=name, hovertemplate=ht)
+    common = dict(x=labels_for(x, frame), y=y, name=name, hovertemplate=ht)
     return go.Bar(**common) if kind == "bar" else go.Scatter(mode="lines+markers", **common)
 
 
@@ -310,11 +327,11 @@ with tab_profit:
         if {"Net Margin", "Revenue", "Total Assets", "Total Equity"} <= set(aw.columns):
             turnover = (aw["Revenue"] / aw["Total Assets"]).dropna()
             leverage = (aw["Total Assets"] / aw["Total Equity"]).dropna()
-            chart([computed(aw.index, aw["Net Margin"], "Net Margin", "%")],
+            chart([computed(aw.index, aw["Net Margin"], "Net Margin", "%", frame=annual_all)],
                   "DuPont decomposition of ROE (annual)", "Net Margin %",
                   y2="Turnover / Leverage (x)",
-                  secondary=[computed(turnover.index, turnover.values, "Asset Turnover", "x"),
-                             computed(leverage.index, leverage.values, "Equity Multiplier", "x")])
+                  secondary=[computed(turnover.index, turnover.values, "Asset Turnover", "x", frame=annual_all),
+                             computed(leverage.index, leverage.values, "Equity Multiplier", "x", frame=annual_all)])
     if trace("Effective Tax Rate") is not None:
         chart([trace("Effective Tax Rate")], "Effective tax rate", "%")
     commentary("Profitability")
@@ -372,8 +389,9 @@ with tab_capital:
         note = None
         if len(sh) >= 2:
             direction = sh["value"].iloc[-1] - sh["value"].iloc[0]
-            note = [dict(x=sh["period"].iloc[len(sh) // 2], y=sh["value"].max(),
-                         showarrow=False, yshift=18,
+            mid = sh.iloc[len(sh) // 2]
+            note = [dict(x=plabel(mid["fiscal_year"], mid["fiscal_quarter"]),
+                         y=sh["value"].max(), showarrow=False, yshift=18,
                          text=("Falling share count → buybacks returning capital"
                                if direction < 0 else
                                "Rising share count → dilution"))]
@@ -394,11 +412,13 @@ with tab_capital:
         payout = []
         if {"Dividends Paid", "Net Income"} <= set(aw_pay.columns):
             dp = (100 * aw_pay["Dividends Paid"] / aw_pay["Net Income"]).dropna()
-            payout.append(computed(dp.index, dp.values, "Dividends ÷ Net Income", "%"))
+            payout.append(computed(dp.index, dp.values, "Dividends ÷ Net Income", "%",
+                                   frame=annual_all))
         if {"Dividends Paid", "Share Buybacks", "Free Cash Flow"} <= set(aw_pay.columns):
             tp = (100 * (aw_pay["Dividends Paid"].fillna(0) + aw_pay["Share Buybacks"].fillna(0))
                   / aw_pay["Free Cash Flow"]).dropna()
-            payout.append(computed(tp.index, tp.values, "(Dividends + Buybacks) ÷ FCF", "%"))
+            payout.append(computed(tp.index, tp.values, "(Dividends + Buybacks) ÷ FCF", "%",
+                                   frame=annual_all))
         if payout:
             chart(payout, "Payout ratios (annual — 100% = all FCF returned)", "%")
     with right:
