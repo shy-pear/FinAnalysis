@@ -327,11 +327,54 @@ def instants(entries: list[dict], fye_month: int) -> dict:
     return out
 
 
+def split_adjust(shares_entries: list[dict], eps_entries: list[dict],
+                 fye_month: int) -> tuple[list[dict], list[dict]]:
+    """Normalize share counts and EPS across stock splits.
+
+    Post-split filings restate *annual* comparatives, but old 10-Qs are never
+    re-filed — so pre-split quarters keep unadjusted share counts (e.g. WMT's
+    2024 3-for-1 split leaves FY2022-23 quarters at ~1/3 the restated scale).
+    Each entry is anchored against its fiscal year's restated annual value;
+    an integer ratio >= 2 is a split factor: shares scale up, EPS scales down.
+    """
+    annual_ref = {}
+    for e in shares_entries:
+        if e.get("start"):
+            months = round((pd.Timestamp(e["end"]) - pd.Timestamp(e["start"])).days / 30.44)
+            if months == 12:
+                fy, _ = fiscal_period(pd.Timestamp(e["end"]), fye_month)
+                annual_ref[fy] = e["val"]
+
+    def factor_for(entry) -> float:
+        ref = annual_ref.get(fiscal_period(pd.Timestamp(entry["end"]), fye_month)[0])
+        if not ref or not entry["val"]:
+            return 1.0
+        ratio = ref / entry["val"]
+        n = round(ratio)
+        if n >= 2 and abs(ratio - n) <= 0.08 * n:
+            return float(n)  # forward split (pre-split entry)
+        inv = round(1 / ratio) if ratio else 0
+        if inv >= 2 and abs(1 / ratio - inv) <= 0.08 * inv:
+            return 1.0 / inv  # reverse split
+        return 1.0
+
+    factors = {(e.get("start"), e["end"]): factor_for(e) for e in shares_entries}
+    adj_shares = [{**e, "val": e["val"] * factors[(e.get("start"), e["end"])]}
+                  for e in shares_entries]
+    # EPS from the same filing/period carries the same (inverse) distortion
+    adj_eps = [{**e, "val": e["val"] / factors.get((e.get("start"), e["end"]), 1.0)}
+               for e in eps_entries]
+    return adj_shares, adj_eps
+
+
 def extract_concept_series(filtered: dict, tag_map: dict, fye_month: int) -> dict:
     """Apply the extraction agent's tag map: concept -> period-keyed values."""
+    collected = {c: collect_entries(filtered, tag_map.get(c)) for c in CONCEPTS}
+    collected["shares_diluted"], collected["eps_diluted"] = split_adjust(
+        collected["shares_diluted"], collected["eps_diluted"], fye_month)
     series = {}
     for concept in CONCEPTS:
-        entries = collect_entries(filtered, tag_map.get(concept))
+        entries = collected[concept]
         if concept in INSTANT_CONCEPTS:
             inst = instants([e for e in entries if not e.get("start")], fye_month)
             series[concept] = {"quarterly": inst,

@@ -19,7 +19,7 @@ pipeline can stitch a complete series.
 
 | Concept | Typical us-gaap tags (not exhaustive — use what's available) |
 |---|---|
-| `revenue` | RevenueFromContractWithCustomerExcludingAssessedTax, Revenues, SalesRevenueNet |
+| `revenue` | RevenueFromContractWithCustomerExcludingAssessedTax, Revenues, SalesRevenueNet — `revenue` means the income statement's **headline total revenues**. If both `Revenues` and the contract-revenue tag exist and `Revenues` is consistently **larger**, the company's total includes non-contract income (e.g. a retailer's membership fees) — put `Revenues` first; contract revenue is then a component, not the headline. If their values are identical, either order works. |
 | `cost_of_revenue` | CostOfGoodsAndServicesSold, CostOfRevenue, CostOfGoodsSold |
 | `gross_profit` | GrossProfit (if absent, pipeline derives Revenue − COGS) |
 | `operating_income` | OperatingIncomeLoss |

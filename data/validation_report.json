@@ -2,50 +2,7 @@
   "verdict": "pass",
   "n_errors": 0,
   "n_warnings": 0,
-  "findings": [
-    {
-      "severity": "info",
-      "check": "plausibility",
-      "period": "FY2023\u2013FY2025",
-      "metric": "Capital Expenditure Intensity",
-      "detail": "Capex as % of Revenue surged from 10.49% (FY2023) to 15.01% (FY2024) to 22.70% (FY2025). In absolute terms, capex nearly tripled from $32.3B to $91.4B over two years, while revenue grew only 31%. This is a dramatic acceleration of capital deployment, consistent with known AI infrastructure investments. Not a data error, but a material business inflection."
-    },
-    {
-      "severity": "info",
-      "check": "earnings_quality",
-      "period": "FY2023\u2013FY2025",
-      "metric": "Return on Invested Capital",
-      "detail": "ROIC peaked in FY2024 at 27.94%, then declined to 25.39% in FY2025, despite net margin expanding from 28.6% to 32.81%. The gap reflects massive capex deployment (91.4B in FY2025) whose returns have not yet manifested. This is a characteristic pattern of a heavy investment phase and not inherently concerning, but signals near-term ROIC pressure until capex cycle normalizes or new assets generate returns."
-    },
-    {
-      "severity": "info",
-      "check": "internal_consistency",
-      "period": "FY2023\u2013FY2025",
-      "metric": "Free Cash Flow Margin & Net Debt Position",
-      "detail": "FCF margin compressed from 22.61% (FY2023) to 18.19% (FY2025) despite operating margin holding steady near 32%. Simultaneously, net debt position flipped from net cash of $10.1B to net debt of $17.8B. Both shifts are driven by the capex ramp. Alphabet is simultaneously reducing share count ($61.5B buybacks in FY2023 \u2192 $45.7B in FY2025), issuing dividends ($0 \u2192 $10.0B), and leveraging balance sheet for capex\u2014a deliberate capital allocation shift."
-    },
-    {
-      "severity": "info",
-      "check": "internal_consistency",
-      "period": "FY2024\u2013FY2025",
-      "metric": "Operating Margin Inflection",
-      "detail": "Operating margin ticked down from 32.11% (FY2024) to 32.03% (FY2025) despite revenue growth of 15.09% and gross margin expansion to 59.65%. This small decline is likely attributable to increased depreciation & amortization on the new capex base (91.4B deployed in FY2025 begins hitting the P&L). Not a red flag, but marks a shift from the 2023\u20132024 margin expansion period."
-    },
-    {
-      "severity": "info",
-      "check": "plausibility",
-      "period": "FY2024\u2013FY2025",
-      "metric": "Interest Coverage",
-      "detail": "Interest coverage ratio fell sharply from 419.4x (FY2024) to 175.3x (FY2025) due to total debt increasing from $14.2B to $48.5B. Coverage remains extremely healthy and is not a solvency concern, but the trend reflects the debt issuance supporting capex."
-    },
-    {
-      "severity": "info",
-      "check": "completeness",
-      "period": "Q1 2023",
-      "metric": "Shares Outstanding (Diluted)",
-      "detail": "Q1 2023 shares outstanding is NaN. This does not affect annual figures (present and accurate) and is isolated to one early quarter, likely due to reporting lag. Low impact: Q2\u2013Q4 2023 and all subsequent quarters are complete."
-    }
-  ],
-  "generated_at": "2026-07-19T07:28:48Z",
+  "findings": [],
+  "generated_at": "2026-07-20T00:43:29Z",
   "source": "edgar"
 }
