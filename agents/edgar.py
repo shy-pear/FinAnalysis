@@ -518,7 +518,10 @@ def assemble_dataframe(series: dict, company: str, ticker: str, cik: int,
                     emit(period, fy, fq, freq, "Growth", "ratio", metric,
                          round(100 * (cur - prev) / abs(prev), 2), "%", u(concept))
 
-    for fy in range(start_fy, end_fy + 1):
+    # end_fy + 1 covers the in-progress fiscal year: whatever 10-Q quarters
+    # exist are emitted (YoY works against the prior complete year); the
+    # annual row and annual-only metrics simply don't exist yet and skip.
+    for fy in range(start_fy, end_fy + 2):
         for q in (1, 2, 3, 4):
             emit_period((fy, q), (fy - 1, q), fy, f"Q{q}", "Quarterly", "quarterly")
         emit_period(fy, fy - 1, fy, "FY", "Annual", "annual")
