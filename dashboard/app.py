@@ -293,12 +293,15 @@ st.divider()
 w = wide()
 annual_all = df_all[df_all["frequency"] == "Annual"]
 
-tab_growth, tab_profit, tab_cash, tab_health, tab_capital = st.tabs([
-    "1 · Growth", "2 · Profitability", "3 · Cash Generation",
-    "4 · Financial Health & Solvency", "5 · Capital Allocation",
-])
+# Category navigation. A segmented control rendering ONLY the active section
+# (not st.tabs): Plotly charts first drawn inside a hidden tab get measured at
+# zero width and collapse to a sliver showing just the axis title.
+SECTIONS = ["1 · Growth", "2 · Profitability", "3 · Cash Generation",
+            "4 · Financial Health & Solvency", "5 · Capital Allocation"]
+section = st.segmented_control("Category", SECTIONS, default=SECTIONS[0],
+                               label_visibility="collapsed") or SECTIONS[0]
 
-with tab_growth:
+if section == "1 · Growth":
     left, right = st.columns(2)
     with left:
         chart([trace("Revenue", kind="bar")], "Revenue", "USD",
@@ -330,7 +333,7 @@ with tab_growth:
             chart(traces, "Growth decomposition (all YoY)", "YoY growth (%)")
     commentary("Growth")
 
-with tab_profit:
+if section == "2 · Profitability":
     left, right = st.columns(2)
     with left:
         # All three margins on one shared chart (+ EBITDA margin when extracted)
@@ -365,7 +368,7 @@ with tab_profit:
         chart([trace("Effective Tax Rate")], "Effective tax rate", "Tax rate (%)")
     commentary("Profitability")
 
-with tab_cash:
+if section == "3 · Cash Generation":
     left, right = st.columns(2)
     with left:
         # Diagnostic pairing: earnings quality
@@ -395,7 +398,7 @@ with tab_cash:
                   "Cumulative FCF vs capital returned (selected range)", "USD")
     commentary("Cash Generation")
 
-with tab_health:
+if section == "4 · Financial Health & Solvency":
     left, right = st.columns(2)
     with left:
         chart([trace("Total Debt", kind="bar"), trace("Cash & Equivalents", kind="bar"),
@@ -414,7 +417,7 @@ with tab_health:
           y2="Equity ÷ Assets (%)" if equity_ratio else None, secondary=equity_ratio)
     commentary("Financial Health & Solvency")
 
-with tab_capital:
+if section == "5 · Capital Allocation":
     sh = series("Shares Outstanding (Diluted)")
     left, right = st.columns(2)
     with left:
