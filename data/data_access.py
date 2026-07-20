@@ -172,6 +172,29 @@ def load_validation_report() -> dict:
     return json.loads(VALIDATION_JSON.read_text())
 
 
+def restore_from_export(ticker: str) -> dict:
+    """Reload a previously-run company from its surviving per-ticker export.
+
+    Free and offline: tableau_export_<TICKER>.csv carries the full schema, so
+    restoring is just writing it back through the normal validated path.
+    Returns the freshly stamped metadata.
+    """
+    path = DATA_DIR / f"tableau_export_{ticker}.csv"
+    if not path.exists():
+        available = sorted(p.stem.replace("tableau_export_", "")
+                           for p in DATA_DIR.glob("tableau_export_*.csv"))
+        raise FileNotFoundError(
+            f"No saved export for {ticker!r} (have: {available or 'none'}). "
+            f"Run the pipeline first: python agents/orchestrator.py "
+            f"--source edgar --ticker {ticker}")
+    df = pd.read_csv(path, parse_dates=["period"])
+    source = ("sample" if str(df["source_url"].iloc[0]).startswith("https://example.com")
+              else "edgar")
+    write_financials(df, source=source)
+    export_tableau()  # keep the canonical 'latest' export in step with the restore
+    return load_metadata()
+
+
 def export_analysis_report() -> Path:
     """Render the saved analysis as docs/analysis_report_<TICKER>.md.
 
