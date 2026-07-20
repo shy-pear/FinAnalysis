@@ -362,7 +362,7 @@ if section == "2 · Profitability":
             leverage = (aw["Total Assets"] / aw["Total Equity"]).dropna()
             chart([computed(aw.index, aw["Net Margin"], "Net Margin", "%", frame=annual_all)],
                   "DuPont decomposition of ROE (annual)", "Net Margin %",
-                  y2="Turnover / Leverage",
+                  y2="Turnover / Leverage (times)",
                   secondary=[computed(turnover.index, turnover.values, "Asset Turnover", "x", frame=annual_all),
                              computed(leverage.index, leverage.values, "Equity Multiplier", "x", frame=annual_all)])
     if trace("Effective Tax Rate") is not None:
@@ -385,7 +385,7 @@ if section == "3 · Cash Generation":
     with left:
         chart([trace("OCF-to-Net-Income Ratio")],
               "OCF ÷ Net Income (≈1 means profits are backed by cash)",
-              "Ratio")
+              "Ratio (times)")
     with right:
         # Can the shareholder-return program be funded from free cash flow?
         # Cumulative sums need every quarter — hidden in single-quarter mode.
@@ -407,8 +407,8 @@ if section == "4 · Financial Health & Solvency":
     with right:
         chart([trace("Current Ratio"), trace("Debt-to-Equity"),
                trace("Net Debt to EBITDA")],
-              "Liquidity & leverage", "Ratio",
-              y2="Interest Coverage", secondary=[trace("Interest Coverage")])
+              "Liquidity & leverage", "Ratio (times)",
+              y2="Interest Coverage (times)", secondary=[trace("Interest Coverage")])
     equity_ratio = None
     if {"Total Equity", "Total Assets"} <= set(w.columns):
         er = (100 * w["Total Equity"] / w["Total Assets"]).dropna()
