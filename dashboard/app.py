@@ -321,7 +321,7 @@ with tab_growth:
         traces = [computed(s.index, s.values, f"{m} YoY %", "%")
                   for m, s in decomp if s is not None and len(s)]
         if traces:
-            chart(traces, "Growth decomposition (all YoY)", "%")
+            chart(traces, "Growth decomposition (all YoY)", "YoY growth (%)")
     commentary("Growth")
 
 with tab_profit:
@@ -329,7 +329,7 @@ with tab_profit:
     with left:
         # All three margins on one shared chart (+ EBITDA margin when extracted)
         chart([trace("Gross Margin"), trace("Operating Margin"), trace("Net Margin"),
-               trace("EBITDA Margin")], "Margins", "%")
+               trace("EBITDA Margin")], "Margins", "Margin (%)")
     with right:
         # Diagnostic pairing: is growth profitable?
         chart([trace("Revenue YoY Growth %", "Revenue YoY Growth %", kind="bar")],
@@ -342,7 +342,8 @@ with tab_profit:
                    for m in ("Return on Equity (ROE)", "Return on Invested Capital (ROIC)",
                              "Return on Assets (ROA)")]
         if any(t is not None for t in returns):
-            chart(returns, "Returns on capital (annual — computed on average balances)", "%")
+            chart(returns, "Returns on capital (annual — computed on average balances)",
+                  "Return (%)")
     with right:
         # DuPont: is ROE coming from margins, asset efficiency, or leverage?
         aw = wide(annual_all)
@@ -355,7 +356,7 @@ with tab_profit:
                   secondary=[computed(turnover.index, turnover.values, "Asset Turnover", "x", frame=annual_all),
                              computed(leverage.index, leverage.values, "Equity Multiplier", "x", frame=annual_all)])
     if trace("Effective Tax Rate") is not None:
-        chart([trace("Effective Tax Rate")], "Effective tax rate", "%")
+        chart([trace("Effective Tax Rate")], "Effective tax rate", "Tax rate (%)")
     commentary("Profitability")
 
 with tab_cash:
@@ -373,10 +374,13 @@ with tab_cash:
     left, right = st.columns(2)
     with left:
         chart([trace("OCF-to-Net-Income Ratio")],
-              "OCF ÷ Net Income (≈1 means profits are backed by cash)", "x")
+              "OCF ÷ Net Income (≈1 means profits are backed by cash)",
+              "Ratio (multiples)")
     with right:
         # Can the shareholder-return program be funded from free cash flow?
-        if {"Free Cash Flow", "Dividends Paid", "Share Buybacks"} <= set(w.columns):
+        # Cumulative sums need every quarter — hidden in single-quarter mode.
+        if quarter_filter == "All" and \
+                {"Free Cash Flow", "Dividends Paid", "Share Buybacks"} <= set(w.columns):
             cum_fcf = w["Free Cash Flow"].fillna(0).cumsum()
             cum_ret = (w["Dividends Paid"].fillna(0) + w["Share Buybacks"].fillna(0)).cumsum()
             chart([computed(cum_fcf.index, cum_fcf.values, "Cumulative FCF", "USD"),
@@ -393,7 +397,7 @@ with tab_health:
     with right:
         chart([trace("Current Ratio"), trace("Debt-to-Equity"),
                trace("Net Debt to EBITDA")],
-              "Liquidity & leverage", "x",
+              "Liquidity & leverage", "Ratio (multiples)",
               y2="Interest Coverage (x)", secondary=[trace("Interest Coverage")])
     equity_ratio = None
     if {"Total Equity", "Total Assets"} <= set(w.columns):
@@ -442,7 +446,7 @@ with tab_capital:
             payout.append(computed(tp.index, tp.values, "(Dividends + Buybacks) ÷ FCF", "%",
                                    frame=annual_all))
         if payout:
-            chart(payout, "Payout ratios (annual — 100% = all FCF returned)", "%")
+            chart(payout, "Payout ratios (annual — 100% = all FCF returned)", "Payout (%)")
     with right:
         # Where every operating dollar went
         deploy = [trace(m, kind="bar") for m in
