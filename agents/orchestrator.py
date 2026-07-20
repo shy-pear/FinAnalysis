@@ -195,8 +195,10 @@ async def _run(source: str, ticker: str | None, max_budget_usd: float,
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "categories": categories, "report_md": report_md,
     })
+    report_path = data_access.export_analysis_report()
     print(f"  Report: {len(report_md):,} chars across {len(categories)} categories; "
           f"cost ${cost:.4f}")
+    print(f"  Companion doc saved: {report_path.relative_to(PROJECT_ROOT)}")
 
     _print_costs(budget)
     return {"source": source, "ticker": meta["ticker"], "rows": meta["row_count"],
