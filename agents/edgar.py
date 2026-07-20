@@ -30,6 +30,8 @@ CONCEPTS = [
     "capex", "dividends_paid", "buybacks", "total_assets", "total_equity",
     "cash", "current_assets", "current_liabilities", "debt_current",
     "debt_noncurrent", "interest_expense",
+    # Extended concepts (R&D intensity, EBITDA family, real tax rate, SBC)
+    "r_and_d", "depreciation_amortization", "tax_expense", "sbc",
 ]
 
 # Balance-sheet concepts are point-in-time (instant); everything else is a flow.
@@ -62,6 +64,10 @@ CANDIDATE_TAGS = {
     "LiabilitiesCurrent", "LongTermDebtCurrent", "DebtCurrent",
     "CommercialPaper", "OtherShortTermBorrowings", "LongTermDebtNoncurrent",
     "InterestExpense", "InterestExpenseNonoperating", "InterestExpenseDebt",
+    "ResearchAndDevelopmentExpense",
+    "DepreciationDepletionAndAmortization", "DepreciationAmortizationAndAccretionNet",
+    "DepreciationAndAmortization", "Depreciation", "AmortizationOfIntangibleAssets",
+    "IncomeTaxExpenseBenefit", "ShareBasedCompensation",
 }
 
 
@@ -431,6 +437,35 @@ def assemble_dataframe(series: dict, company: str, ticker: str, cik: int,
         emit(period, fy, fq, freq, "Capital Allocation", "cash_flow", "Dividends Paid", g("dividends_paid"), "USD", u("dividends_paid"))
         emit(period, fy, fq, freq, "Capital Allocation", "cash_flow", "Share Buybacks", g("buybacks"), "USD", u("buybacks"))
 
+        # Extended concepts — emitted only when the filing reports them
+        rnd, da = g("r_and_d"), g("depreciation_amortization")
+        tax, sbc = g("tax_expense"), g("sbc")
+        emit(period, fy, fq, freq, "Capital Allocation", "income_statement", "R&D Expense", rnd, "USD", u("r_and_d"))
+        if rev and rnd is not None:
+            emit(period, fy, fq, freq, "Capital Allocation", "ratio", "R&D as % of Revenue",
+                 round(100 * rnd / rev, 2), "%", u("r_and_d"))
+        emit(period, fy, fq, freq, "Cash Generation", "cash_flow", "Depreciation & Amortization", da, "USD", u("depreciation_amortization"))
+        if oi is not None and da is not None:
+            ebitda = oi + da
+            emit(period, fy, fq, freq, "Profitability", "income_statement", "EBITDA", ebitda, "USD", u("depreciation_amortization"))
+            if rev:
+                emit(period, fy, fq, freq, "Profitability", "ratio", "EBITDA Margin",
+                     round(100 * ebitda / rev, 2), "%", u("depreciation_amortization"))
+            # Net Debt / EBITDA only annually — a single quarter's EBITDA
+            # in the denominator would overstate leverage ~4x
+            if freq == "Annual" and net_debt is not None and ebitda:
+                emit(period, fy, fq, freq, "Financial Health & Solvency", "ratio",
+                     "Net Debt to EBITDA", round(net_debt / ebitda, 2), "x",
+                     u("depreciation_amortization"))
+        emit(period, fy, fq, freq, "Profitability", "income_statement", "Income Tax Expense", tax, "USD", u("tax_expense"))
+        if tax is not None and ni is not None and (ni + tax) > 0:
+            emit(period, fy, fq, freq, "Profitability", "ratio", "Effective Tax Rate",
+                 round(100 * tax / (ni + tax), 2), "%", u("tax_expense"))
+        emit(period, fy, fq, freq, "Capital Allocation", "cash_flow", "Stock-Based Compensation", sbc, "USD", u("sbc"))
+        if fcf is not None and sbc is not None:
+            emit(period, fy, fq, freq, "Cash Generation", "cash_flow", "SBC-Adjusted FCF",
+                 fcf - sbc, "USD", u("sbc"))
+
         # YoY growth — always vs the same period one year earlier, never QoQ
         if prior_key is not None:
             for metric, concept in (("Revenue YoY Growth %", "revenue"),
@@ -470,8 +505,12 @@ def assemble_dataframe(series: dict, company: str, ticker: str, cik: int,
                  "Return on Assets (ROA)", round(100 * ni / assets_avg, 2), "%", url)
         if oi is not None and equity_avg and debt_avg_parts:
             invested = equity_avg + sum(debt_avg_parts)
+            # Prefer the real effective tax rate over the statutory assumption
+            tax_fy = val("tax_expense", fy, "annual")
+            rate = (tax_fy / (ni + tax_fy)
+                    if tax_fy is not None and (ni + tax_fy) > 0 else ASSUMED_TAX_RATE)
             emit(period, fy, "FY", "Annual", "Profitability", "ratio",
                  "Return on Invested Capital (ROIC)",
-                 round(100 * oi * (1 - ASSUMED_TAX_RATE) / invested, 2), "%", url)
+                 round(100 * oi * (1 - rate) / invested, 2), "%", url)
 
     return pd.DataFrame(rows)

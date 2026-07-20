@@ -38,6 +38,10 @@ pipeline can stitch a complete series.
 | `debt_current` | LongTermDebtCurrent, DebtCurrent, CommercialPaper, OtherShortTermBorrowings |
 | `debt_noncurrent` | LongTermDebtNoncurrent |
 | `interest_expense` | InterestExpense, InterestExpenseNonoperating, InterestExpenseDebt |
+| `r_and_d` | ResearchAndDevelopmentExpense |
+| `depreciation_amortization` | DepreciationDepletionAndAmortization, DepreciationAmortizationAndAccretionNet, DepreciationAndAmortization; some companies split it — then use `"combine": "sum"` over Depreciation + AmortizationOfIntangibleAssets |
+| `tax_expense` | IncomeTaxExpenseBenefit |
+| `sbc` | ShareBasedCompensation |
 
 ## Mapping rules
 

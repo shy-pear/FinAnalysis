@@ -131,7 +131,8 @@ def trace(metric: str, name: str | None = None, kind: str = "line",
 
 
 def chart(traces, title: str, y1: str = "", y2: str | None = None,
-          secondary: list | None = None, annotations: list | None = None):
+          secondary: list | None = None, annotations: list | None = None,
+          barmode: str | None = None):
     """Render a (optionally dual-axis) chart from prepared traces."""
     fig = make_subplots(specs=[[{"secondary_y": y2 is not None}]])
     for t in traces:
@@ -141,13 +142,43 @@ def chart(traces, title: str, y1: str = "", y2: str | None = None,
         if t is not None:
             fig.add_trace(t, secondary_y=True)
     fig.update_layout(title=title, height=380, margin=dict(t=48, b=8),
-                      legend=dict(orientation="h", y=-0.15))
+                      legend=dict(orientation="h", y=-0.15),
+                      **({"barmode": barmode} if barmode else {}))
     fig.update_yaxes(title_text=y1, secondary_y=False)
     if y2 is not None:
         fig.update_yaxes(title_text=y2, secondary_y=True)
     for a in annotations or []:
         fig.add_annotation(**a)
     st.plotly_chart(fig, width="stretch")
+
+
+def wide(frame: pd.DataFrame | None = None) -> pd.DataFrame:
+    """Period-indexed wide view of the filtered data, for derived ratios."""
+    frame = df if frame is None else frame
+    return frame.pivot_table(index="period", columns="metric",
+                             values="value", aggfunc="first").sort_index()
+
+
+def computed(x, y, name: str, unit: str, kind: str = "line"):
+    """Trace for a ratio derived in the dashboard from reported metrics."""
+    ht = (f"<b>{name}</b><br>%{{x|%Y-%m-%d}}<br>%{{y:,.2f}} {unit}"
+          "<br><i>computed from reported metrics</i><extra></extra>")
+    common = dict(x=x, y=y, name=name, hovertemplate=ht)
+    return go.Bar(**common) if kind == "bar" else go.Scatter(mode="lines+markers", **common)
+
+
+def yoy_series(metric: str) -> pd.Series | None:
+    """YoY % change vs the same fiscal period one year earlier — never QoQ."""
+    s = series(metric)
+    if s.empty:
+        return None
+    prior = s.set_index(["fiscal_year", "fiscal_quarter"])["value"]
+    vals = [
+        100 * (r.value - p) / abs(p) if (p := prior.get((r.fiscal_year - 1, r.fiscal_quarter)))
+        not in (None,) and pd.notna(p) and p != 0 else None
+        for r in s.itertuples()
+    ]
+    return pd.Series(vals, index=list(s["period"]), name=metric).dropna()
 
 
 def md_safe(text: str) -> str:
@@ -223,6 +254,28 @@ with left:
 with right:
     chart([trace("EPS (Diluted)", kind="bar")], "EPS (Diluted)", "USD/share",
           y2="YoY %", secondary=[trace("EPS YoY Growth %", "EPS YoY %")])
+left, right = st.columns(2)
+w = wide()
+with left:
+    if frequency == "Quarterly" and "Revenue" in w.columns:
+        ttm = w["Revenue"].rolling(4).sum().dropna()
+        if len(ttm):
+            chart([computed(ttm.index, ttm.values, "TTM Revenue", "USD")],
+                  "Trailing-12-month revenue (seasonality removed)", "USD")
+    else:
+        # Rule of 40: growth + FCF margin in one number
+        if {"Revenue YoY Growth %", "FCF Margin"} <= set(w.columns):
+            r40 = (w["Revenue YoY Growth %"] + w["FCF Margin"]).dropna()
+            if len(r40):
+                chart([computed(r40.index, r40.values, "Rule of 40", "pts", kind="bar")],
+                      "Rule of 40 (revenue growth + FCF margin)", "points")
+with right:
+    # Where EPS growth comes from: revenue vs profit leverage vs buybacks
+    decomp = [(m, yoy_series(m)) for m in ("Revenue", "Net Income", "EPS (Diluted)")]
+    traces = [computed(s.index, s.values, f"{m} YoY %", "%")
+              for m, s in decomp if s is not None and len(s)]
+    if traces:
+        chart(traces, "Growth decomposition (all YoY)", "%")
 commentary("Growth")
 
 # ── 2. Profitability ───────────────────────────────────────────────────────
@@ -230,20 +283,36 @@ commentary("Growth")
 st.header("2 · Profitability")
 left, right = st.columns(2)
 with left:
-    # All three margins on one shared chart
-    chart([trace("Gross Margin"), trace("Operating Margin"), trace("Net Margin")],
-          "Margins", "%")
+    # All three margins on one shared chart (+ EBITDA margin when extracted)
+    chart([trace("Gross Margin"), trace("Operating Margin"), trace("Net Margin"),
+           trace("EBITDA Margin")], "Margins", "%")
 with right:
     # Diagnostic pairing: is growth profitable?
     chart([trace("Revenue YoY Growth %", "Revenue YoY Growth %", kind="bar")],
           "Revenue Growth vs Operating Margin (is growth profitable?)",
           "Revenue YoY %", y2="Operating Margin %",
           secondary=[trace("Operating Margin")])
-returns = [trace(m, frame=df_all[df_all["frequency"] == "Annual"])
-           for m in ("Return on Equity (ROE)", "Return on Invested Capital (ROIC)",
-                     "Return on Assets (ROA)")]
-if any(t is not None for t in returns):
-    chart(returns, "Returns on capital (annual — computed on average balances)", "%")
+left, right = st.columns(2)
+annual_all = df_all[df_all["frequency"] == "Annual"]
+with left:
+    returns = [trace(m, frame=annual_all)
+               for m in ("Return on Equity (ROE)", "Return on Invested Capital (ROIC)",
+                         "Return on Assets (ROA)")]
+    if any(t is not None for t in returns):
+        chart(returns, "Returns on capital (annual — computed on average balances)", "%")
+with right:
+    # DuPont: is ROE coming from margins, asset efficiency, or leverage?
+    aw = wide(annual_all)
+    if {"Net Margin", "Revenue", "Total Assets", "Total Equity"} <= set(aw.columns):
+        turnover = (aw["Revenue"] / aw["Total Assets"]).dropna()
+        leverage = (aw["Total Assets"] / aw["Total Equity"]).dropna()
+        chart([computed(aw.index, aw["Net Margin"], "Net Margin", "%")],
+              "DuPont decomposition of ROE (annual)", "Net Margin %",
+              y2="Turnover / Leverage (x)",
+              secondary=[computed(turnover.index, turnover.values, "Asset Turnover", "x"),
+                         computed(leverage.index, leverage.values, "Equity Multiplier", "x")])
+if trace("Effective Tax Rate") is not None:
+    chart([trace("Effective Tax Rate")], "Effective tax rate", "%")
 commentary("Profitability")
 
 # ── 3. Cash Generation ─────────────────────────────────────────────────────
@@ -257,10 +326,22 @@ with left:
           "Net Income (USD)", y2="OCF (USD)",
           secondary=[trace("Operating Cash Flow")])
 with right:
-    chart([trace("Free Cash Flow", kind="bar")], "Free Cash Flow", "USD",
+    chart([trace("Free Cash Flow", kind="bar"), trace("SBC-Adjusted FCF")],
+          "Free Cash Flow", "USD",
           y2="FCF Margin %", secondary=[trace("FCF Margin")])
-chart([trace("OCF-to-Net-Income Ratio")],
-      "OCF ÷ Net Income (≈1 means profits are backed by cash)", "x")
+left, right = st.columns(2)
+with left:
+    chart([trace("OCF-to-Net-Income Ratio")],
+          "OCF ÷ Net Income (≈1 means profits are backed by cash)", "x")
+with right:
+    # Can the shareholder-return program be funded from free cash flow?
+    if {"Free Cash Flow", "Dividends Paid", "Share Buybacks"} <= set(w.columns):
+        cum_fcf = w["Free Cash Flow"].fillna(0).cumsum()
+        cum_ret = (w["Dividends Paid"].fillna(0) + w["Share Buybacks"].fillna(0)).cumsum()
+        chart([computed(cum_fcf.index, cum_fcf.values, "Cumulative FCF", "USD"),
+               computed(cum_ret.index, cum_ret.values,
+                        "Cumulative dividends + buybacks", "USD")],
+              "Cumulative FCF vs capital returned (selected range)", "USD")
 commentary("Cash Generation")
 
 # ── 4. Financial Health & Solvency ─────────────────────────────────────────
@@ -271,11 +352,17 @@ with left:
     chart([trace("Total Debt", kind="bar"), trace("Cash & Equivalents", kind="bar"),
            trace("Net Debt")], "Debt vs Cash", "USD")
 with right:
-    chart([trace("Current Ratio"), trace("Debt-to-Equity")],
+    chart([trace("Current Ratio"), trace("Debt-to-Equity"),
+           trace("Net Debt to EBITDA")],
           "Liquidity & leverage", "x",
           y2="Interest Coverage (x)", secondary=[trace("Interest Coverage")])
+equity_ratio = None
+if {"Total Equity", "Total Assets"} <= set(w.columns):
+    er = (100 * w["Total Equity"] / w["Total Assets"]).dropna()
+    equity_ratio = [computed(er.index, er.values, "Equity Ratio", "%")]
 chart([trace("Total Assets", kind="bar"), trace("Total Equity", kind="bar")],
-      "Balance sheet size", "USD")
+      "Balance sheet size", "USD",
+      y2="Equity ÷ Assets (%)" if equity_ratio else None, secondary=equity_ratio)
 commentary("Financial Health & Solvency")
 
 # ── 5. Capital Allocation ──────────────────────────────────────────────────
@@ -295,10 +382,38 @@ with left:
     chart([trace("Shares Outstanding (Diluted)", "Shares Outstanding")],
           "Shares Outstanding (Diluted)", "shares", annotations=note)
 with right:
-    chart([trace("Dividends Paid", kind="bar"), trace("Share Buybacks", kind="bar")],
-          "Capital returned to shareholders", "USD",
-          y2="Capex % of revenue", secondary=[trace("Capex as % of Revenue")])
+    chart([trace("Dividends Paid", kind="bar"), trace("Share Buybacks", kind="bar"),
+           trace("Stock-Based Compensation", kind="bar")],
+          "Capital returned vs SBC issued", "USD",
+          y2="Reinvestment (% of revenue)",
+          secondary=[trace("Capex as % of Revenue"), trace("R&D as % of Revenue")])
+left, right = st.columns(2)
+with left:
+    # Payout sustainability: what share of profits/FCF goes back to holders?
+    payout = []
+    if {"Dividends Paid", "Net Income"} <= set(w.columns):
+        dp = (100 * w["Dividends Paid"] / w["Net Income"]).dropna()
+        payout.append(computed(dp.index, dp.values, "Dividends ÷ Net Income", "%"))
+    if {"Dividends Paid", "Share Buybacks", "Free Cash Flow"} <= set(w.columns):
+        tp = (100 * (w["Dividends Paid"].fillna(0) + w["Share Buybacks"].fillna(0))
+              / w["Free Cash Flow"]).dropna()
+        payout.append(computed(tp.index, tp.values, "(Dividends + Buybacks) ÷ FCF", "%"))
+    if payout:
+        chart(payout, "Payout ratios", "%")
+with right:
+    # Where every operating dollar went
+    deploy = [trace(m, kind="bar") for m in
+              ("Capital Expenditures", "Dividends Paid", "Share Buybacks")]
+    if any(t is not None for t in deploy):
+        chart(deploy, "Capital deployment vs operating cash flow", "USD",
+              y2="OCF (USD)", secondary=[trace("Operating Cash Flow")],
+              barmode="stack")
 commentary("Capital Allocation")
+
+if "EBITDA" not in set(df_all["metric"].unique()):
+    st.caption("Extended metrics (EBITDA, R&D %, effective tax rate, SBC) are "
+               "wired into the pipeline but not yet in this dataset — they "
+               "populate on the next pipeline run.")
 
 
 # ── Sidebar: ask the analysis agent ────────────────────────────────────────

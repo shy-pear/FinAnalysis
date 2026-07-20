@@ -127,6 +127,10 @@ def deterministic_checks(df: pd.DataFrame) -> list[dict]:
              lambda a, b: a - b, "FCF = OCF - Capex"),
             ("Net Debt", "Total Debt", "Cash & Equivalents",
              lambda a, b: a - b, "Net Debt = Debt - Cash"),
+            ("EBITDA", "Operating Income", "Depreciation & Amortization",
+             lambda a, b: a + b, "EBITDA = OI + D&A"),
+            ("SBC-Adjusted FCF", "Free Cash Flow", "Stock-Based Compensation",
+             lambda a, b: a - b, "SBC-adj FCF = FCF - SBC"),
         ]
         for target, x, y, fn, name in pairs:
             t, a, b = g(target), g(x), g(y)

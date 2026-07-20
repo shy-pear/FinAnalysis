@@ -87,7 +87,13 @@ def build_quarter_fundamentals() -> list[dict]:
             operating_income = gross_profit - opex
 
             interest = debt * 0.0225 / 4  # ~2.25% annual cost of debt
-            net_income = (operating_income - interest) * (1 - TAX_RATE)
+            tax = (operating_income - interest) * TAX_RATE
+            net_income = operating_income - interest - tax
+
+            # Extended concepts (subsets of opex/cogs, modeled for ratios)
+            r_and_d = revenue * (0.082 + 0.001 * years_in + RNG.normal(0, 0.002))
+            d_and_a = revenue * RNG.normal(0.040, 0.002)
+            sbc = revenue * RNG.normal(0.024, 0.002)
 
             # Cash conversion: OCF runs ~1.25x NI with D&A and working capital;
             # one soft patch in FY2023 keeps the earnings-quality chart honest
@@ -114,6 +120,7 @@ def build_quarter_fundamentals() -> list[dict]:
                 "operating_income": operating_income, "net_income": net_income,
                 "interest": interest, "ocf": ocf, "capex": capex,
                 "dividends": dividends, "buybacks": buybacks,
+                "r_and_d": r_and_d, "d_and_a": d_and_a, "sbc": sbc, "tax": tax,
                 "shares": shares, "equity": equity, "cash": cash, "debt": debt,
                 # Point-in-time items modeled directly (components not emitted)
                 "total_assets": equity * 2.18 + RNG.normal(0, 400e6),
@@ -133,7 +140,8 @@ def rows_for_period(f: dict, prior: dict | None, fy: int, quarter: str,
     usd = {k: round(f[k]) for k in ("revenue", "gross_profit", "operating_income",
                                     "net_income", "ocf", "capex", "dividends",
                                     "buybacks", "equity", "cash", "debt",
-                                    "total_assets")}
+                                    "total_assets", "r_and_d", "d_and_a",
+                                    "sbc", "tax")}
     shares = round(f["shares"])
     fcf = usd["ocf"] - usd["capex"]
     net_debt = usd["debt"] - usd["cash"]
@@ -176,7 +184,20 @@ def rows_for_period(f: dict, prior: dict | None, fy: int, quarter: str,
         m("Capital Allocation", "ratio", "Capex as % of Revenue", round(100 * usd["capex"] / usd["revenue"], 2), "%"),
         m("Capital Allocation", "cash_flow", "Dividends Paid", usd["dividends"], "USD"),
         m("Capital Allocation", "cash_flow", "Share Buybacks", usd["buybacks"], "USD"),
+        # Extended concepts — mirror the edgar-mode derivations
+        m("Capital Allocation", "income_statement", "R&D Expense", usd["r_and_d"], "USD"),
+        m("Capital Allocation", "ratio", "R&D as % of Revenue", round(100 * usd["r_and_d"] / usd["revenue"], 2), "%"),
+        m("Cash Generation", "cash_flow", "Depreciation & Amortization", usd["d_and_a"], "USD"),
+        m("Profitability", "income_statement", "EBITDA", usd["operating_income"] + usd["d_and_a"], "USD"),
+        m("Profitability", "ratio", "EBITDA Margin", round(100 * (usd["operating_income"] + usd["d_and_a"]) / usd["revenue"], 2), "%"),
+        m("Profitability", "income_statement", "Income Tax Expense", usd["tax"], "USD"),
+        m("Profitability", "ratio", "Effective Tax Rate", round(100 * usd["tax"] / (usd["net_income"] + usd["tax"]), 2), "%"),
+        m("Capital Allocation", "cash_flow", "Stock-Based Compensation", usd["sbc"], "USD"),
+        m("Cash Generation", "cash_flow", "SBC-Adjusted FCF", fcf - usd["sbc"], "USD"),
     ]
+    if quarter == "FY":  # leverage vs a single quarter's EBITDA would mislead
+        rows.append(m("Financial Health & Solvency", "ratio", "Net Debt to EBITDA",
+                      round(net_debt / (usd["operating_income"] + usd["d_and_a"]), 2), "x"))
 
     # YoY growth — always vs the same period one year earlier, never QoQ
     if prior is not None:
@@ -199,7 +220,8 @@ def aggregate_year(quarters: list[dict], fy: int) -> dict:
     q4 = qs[-1]
     flows = {k: sum(q[k] for q in qs) for k in
              ("revenue", "gross_profit", "operating_income", "net_income",
-              "interest", "ocf", "capex", "dividends", "buybacks")}
+              "interest", "ocf", "capex", "dividends", "buybacks",
+              "r_and_d", "d_and_a", "sbc", "tax")}
     return {**flows, "period": q4["period"], "shares": q4["shares"],
             "equity": q4["equity"], "cash": q4["cash"], "debt": q4["debt"],
             "total_assets": q4["total_assets"], "current_ratio": q4["current_ratio"]}
