@@ -160,11 +160,17 @@ def chart(traces, title: str, y1: str = "", y2: str | None = None,
     live2 = [t for t in (secondary or []) if t is not None]
     if not live and not live2:
         return  # nothing to plot — skip instead of rendering a broken sliver
-    fig = make_subplots(specs=[[{"secondary_y": y2 is not None}]])
+    if not live:  # only the secondary metric exists — promote it to the main axis
+        live, live2 = live2, []
+        y1 = y2 or y1
+    # Create the secondary axis only when it has data — otherwise Plotly
+    # renders a labeled right-hand axis with no tick numbers behind it.
+    use_secondary = y2 is not None and bool(live2)
+    fig = make_subplots(specs=[[{"secondary_y": use_secondary}]])
     for t in live:
         fig.add_trace(t, secondary_y=False)
     for t in live2:
-        fig.add_trace(t, secondary_y=True)
+        fig.add_trace(t, secondary_y=use_secondary)
     # Legend sits below the x-axis labels (yanchor top + negative y), with
     # enough bottom margin that neither overlaps the axis.
     fig.update_layout(title=title, height=400, margin=dict(t=48, b=95),
@@ -172,9 +178,9 @@ def chart(traces, title: str, y1: str = "", y2: str | None = None,
                                   x=0, xanchor="left"),
                       **({"barmode": barmode} if barmode else {}))
     # Financial notation on numeric axes: 400B / 1.2T — never ×10⁹ exponents
-    fig.update_yaxes(title_text=y1, exponentformat="B", separatethousands=True,
-                     secondary_y=False)
-    if y2 is not None:
+    fig.update_yaxes(title_text=y1 if live else "", exponentformat="B",
+                     separatethousands=True, secondary_y=False)
+    if use_secondary:
         fig.update_yaxes(title_text=y2, exponentformat="B",
                          separatethousands=True, secondary_y=True)
     # Fiscal-period labels, chronological: 'FY2025 Q1' sorts correctly as text
