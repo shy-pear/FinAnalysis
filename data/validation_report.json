@@ -5,12 +5,19 @@
   "findings": [
     {
       "severity": "warning",
-      "check": "completeness",
-      "period": "FY2024-FY2025",
-      "metric": "Interest Coverage",
-      "detail": "Interest Coverage is NaN for FY2024 and FY2025, while populated (41.2x, 40.7x, 29.1x) for FY2021-FY2023. This suggests Interest Expense was not extracted or calculated for the recent years. Confirm whether this is an intentional exclusion or a data extraction gap; recommend clarifying in metadata."
+      "check": "plausibility",
+      "period": "FY2024",
+      "metric": "Effective Tax Rate",
+      "detail": "Effective tax rate spiked to 24.09% in FY2024 from 14.72% in FY2023, then reverted to 15.61% in FY2025. This 2.3\u00d7 increase represents approximately $11B in additional tax expense relative to a normalized rate. Likely reflects one-time tax items, repatriation of foreign earnings, or tax law changes, but should be verified against 10-K tax footnotes and MD&A to confirm no data extraction error."
+    },
+    {
+      "severity": "info",
+      "check": "earnings_quality",
+      "period": "FY2025",
+      "metric": "OCF-to-Net-Income Ratio",
+      "detail": "OCF/NI fell to 1.00 in FY2025, the lowest in the dataset, from 1.26 in FY2024. Driven by OCF declining 5.8% YoY while NI grew 19.5%. Quarter-by-quarter, FY2025 Q1\u2013Q2 show OCF below NI (0.82x, 0.97x)\u2014unusual for Apple\u2014while Q3\u2013Q4 recover to normal (1.19x, 1.08x). Pattern likely reflects working capital timing, tax or dividend payment seasonality, but is worth monitoring for sustained divergence."
     }
   ],
-  "generated_at": "2026-07-20T01:18:16Z",
+  "generated_at": "2026-07-20T02:38:36Z",
   "source": "edgar"
 }

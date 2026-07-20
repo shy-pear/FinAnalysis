@@ -93,6 +93,12 @@ if analysis and analysis.get("ticker") != TICKER:
 with st.sidebar:
     st.header("Controls")
     frequency = st.radio("Frequency", ["Annual", "Quarterly"], horizontal=True)
+    quarter_filter = "All"
+    if frequency == "Quarterly":
+        # Compare one fiscal quarter across years (Q1 vs Q1 vs Q1 ...) —
+        # the seasonally-clean way to eyeball a quarterly trend.
+        quarter_filter = st.segmented_control(
+            "Quarter", ["All", "Q1", "Q2", "Q3", "Q4"], default="All") or "All"
     dmin, dmax = df_all["period"].min().date(), df_all["period"].max().date()
     date_range = st.slider("Date range", min_value=dmin, max_value=dmax,
                            value=(dmin, dmax), format="YYYY-MM")
@@ -100,6 +106,8 @@ with st.sidebar:
 df = df_all[(df_all["frequency"] == frequency)
             & (df_all["period"].dt.date >= date_range[0])
             & (df_all["period"].dt.date <= date_range[1])]
+if quarter_filter != "All":
+    df = df[df["fiscal_quarter"] == quarter_filter]
 
 if df.empty:
     st.error("No rows in the selected range — widen the date range.")
@@ -148,19 +156,27 @@ def chart(traces, title: str, y1: str = "", y2: str | None = None,
           secondary: list | None = None, annotations: list | None = None,
           barmode: str | None = None):
     """Render a (optionally dual-axis) chart from prepared traces."""
+    live = [t for t in traces if t is not None]
+    live2 = [t for t in (secondary or []) if t is not None]
+    if not live and not live2:
+        return  # nothing to plot — skip instead of rendering a broken sliver
     fig = make_subplots(specs=[[{"secondary_y": y2 is not None}]])
-    for t in traces:
-        if t is not None:
-            fig.add_trace(t, secondary_y=False)
-    for t in secondary or []:
-        if t is not None:
-            fig.add_trace(t, secondary_y=True)
-    fig.update_layout(title=title, height=380, margin=dict(t=48, b=8),
-                      legend=dict(orientation="h", y=-0.15),
+    for t in live:
+        fig.add_trace(t, secondary_y=False)
+    for t in live2:
+        fig.add_trace(t, secondary_y=True)
+    # Legend sits below the x-axis labels (yanchor top + negative y), with
+    # enough bottom margin that neither overlaps the axis.
+    fig.update_layout(title=title, height=400, margin=dict(t=48, b=95),
+                      legend=dict(orientation="h", yanchor="top", y=-0.28,
+                                  x=0, xanchor="left"),
                       **({"barmode": barmode} if barmode else {}))
-    fig.update_yaxes(title_text=y1, secondary_y=False)
+    # Financial notation on numeric axes: 400B / 1.2T — never ×10⁹ exponents
+    fig.update_yaxes(title_text=y1, exponentformat="B", separatethousands=True,
+                     secondary_y=False)
     if y2 is not None:
-        fig.update_yaxes(title_text=y2, secondary_y=True)
+        fig.update_yaxes(title_text=y2, exponentformat="B",
+                         separatethousands=True, secondary_y=True)
     # Fiscal-period labels, chronological: 'FY2025 Q1' sorts correctly as text
     fig.update_xaxes(type="category", categoryorder="category ascending")
     for a in annotations or []:
@@ -254,9 +270,14 @@ for col, metric in zip(cols, ("Revenue", "Net Income", "Free Cash Flow")):
                       f"{delta:+.1f}% YoY" if delta is not None else None)
 
 if frequency == "Quarterly":
-    st.caption("Quarterly comparisons are **year-over-year** (vs the same "
-               "quarter one year earlier), never sequential quarters — "
-               "seasonality makes QoQ trends meaningless.")
+    if quarter_filter == "All":
+        st.caption("Quarterly comparisons are **year-over-year** (vs the same "
+                   "quarter one year earlier), never sequential quarters — "
+                   "seasonality makes QoQ trends meaningless.")
+    else:
+        st.caption(f"Showing **{quarter_filter} only, across years** — every "
+                   "point on every chart is the same fiscal quarter, so the "
+                   "trend is seasonally clean by construction.")
 
 st.divider()
 
@@ -281,7 +302,8 @@ with tab_growth:
               y2="YoY %", secondary=[trace("EPS YoY Growth %", "EPS YoY %")])
     left, right = st.columns(2)
     with left:
-        if frequency == "Quarterly" and "Revenue" in w.columns:
+        # TTM needs all four quarters — meaningless when filtered to one quarter
+        if frequency == "Quarterly" and quarter_filter == "All" and "Revenue" in w.columns:
             ttm = w["Revenue"].rolling(4).sum().dropna()
             if len(ttm):
                 chart([computed(ttm.index, ttm.values, "TTM Revenue", "USD")],

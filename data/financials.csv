@@ -907,3 +907,73 @@ Apple Inc.,AAPL,2025-09-27,2025,Q4,Quarterly,Profitability,income_statement,Net 
 Apple Inc.,AAPL,2025-09-27,2025,Q4,Quarterly,Profitability,ratio,Net Margin,26.8,%,https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.htm
 Apple Inc.,AAPL,2025-09-27,2025,Q4,Quarterly,Profitability,income_statement,Operating Income,32427000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.htm
 Apple Inc.,AAPL,2025-09-27,2025,Q4,Quarterly,Profitability,ratio,Operating Margin,31.65,%,https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Capital Allocation,ratio,Capex as % of Revenue,1.65,%,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Capital Allocation,cash_flow,Dividends Paid,3921000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Capital Allocation,income_statement,R&D Expense,10887000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Capital Allocation,ratio,R&D as % of Revenue,7.57,%,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Capital Allocation,cash_flow,Share Buybacks,24701000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),14810356000.0,shares,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Capital Allocation,cash_flow,Stock-Based Compensation,3594000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Cash Generation,cash_flow,Capital Expenditures,2373000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Cash Generation,cash_flow,Depreciation & Amortization,3214000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Cash Generation,ratio,FCF Margin,35.86,%,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Cash Generation,cash_flow,Free Cash Flow,51552000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Cash Generation,ratio,OCF-to-Net-Income Ratio,1.28,x,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Cash Generation,cash_flow,Operating Cash Flow,53925000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Cash Generation,cash_flow,SBC-Adjusted FCF,47958000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Cash & Equivalents,45317000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Financial Health & Solvency,ratio,Current Ratio,0.97,x,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Financial Health & Solvency,ratio,Debt-to-Equity,1.03,x,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Net Debt,45192000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Total Assets,379297000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Total Debt,90509000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Financial Health & Solvency,balance_sheet,Total Equity,88190000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Growth,income_statement,EPS (Diluted),2.84,USD/share,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Growth,ratio,EPS YoY Growth %,18.33,%,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Growth,income_statement,Revenue,143756000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Growth,ratio,Revenue YoY Growth %,15.65,%,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Profitability,income_statement,EBITDA,54066000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Profitability,ratio,EBITDA Margin,37.61,%,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Profitability,ratio,Effective Tax Rate,17.46,%,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Profitability,ratio,Gross Margin,48.16,%,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Profitability,income_statement,Gross Profit,69231000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Profitability,income_statement,Income Tax Expense,8905000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Profitability,income_statement,Net Income,42097000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Profitability,ratio,Net Margin,29.28,%,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Profitability,income_statement,Operating Income,50852000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2025-12-27,2026,Q1,Quarterly,Profitability,ratio,Operating Margin,35.37,%,https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/0000320193-26-000006-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Capital Allocation,ratio,Capex as % of Revenue,1.77,%,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Capital Allocation,cash_flow,Dividends Paid,3822000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Capital Allocation,income_statement,R&D Expense,11419000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Capital Allocation,ratio,R&D as % of Revenue,10.27,%,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Capital Allocation,cash_flow,Share Buybacks,12288000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Capital Allocation,balance_sheet,Shares Outstanding (Diluted),14725873000.0,shares,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Capital Allocation,cash_flow,Stock-Based Compensation,3528000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Cash Generation,cash_flow,Capital Expenditures,1971000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Cash Generation,cash_flow,Depreciation & Amortization,3439000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Cash Generation,ratio,FCF Margin,24.04,%,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Cash Generation,cash_flow,Free Cash Flow,26731000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Cash Generation,ratio,OCF-to-Net-Income Ratio,0.97,x,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Cash Generation,cash_flow,Operating Cash Flow,28702000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Cash Generation,cash_flow,SBC-Adjusted FCF,23203000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Cash & Equivalents,45572000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Financial Health & Solvency,ratio,Current Ratio,1.07,x,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Financial Health & Solvency,ratio,Debt-to-Equity,0.8,x,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Net Debt,39139000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Total Assets,371082000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Total Debt,84711000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Financial Health & Solvency,balance_sheet,Total Equity,106491000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Growth,income_statement,EPS (Diluted),2.01,USD/share,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Growth,ratio,EPS YoY Growth %,21.82,%,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Growth,income_statement,Revenue,111184000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Growth,ratio,Revenue YoY Growth %,16.6,%,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Profitability,income_statement,EBITDA,39324000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Profitability,ratio,EBITDA Margin,35.37,%,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Profitability,ratio,Effective Tax Rate,17.46,%,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Profitability,ratio,Gross Margin,49.27,%,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Profitability,income_statement,Gross Profit,54781000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Profitability,income_statement,Income Tax Expense,6255000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Profitability,income_statement,Net Income,29578000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Profitability,ratio,Net Margin,26.6,%,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Profitability,income_statement,Operating Income,35885000000.0,USD,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
+Apple Inc.,AAPL,2026-03-28,2026,Q2,Quarterly,Profitability,ratio,Operating Margin,32.28,%,https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.htm
