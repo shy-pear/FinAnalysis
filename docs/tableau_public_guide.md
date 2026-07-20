@@ -144,21 +144,36 @@ Every row carries the SEC filing URL it came from. To surface it:
 3. Repeat for each sheet (tooltips are per-sheet). Now every hovered number
    can be traced to the filing it came from.
 
-## 8. Assemble the dashboard
+## 8. Assemble the dashboards — one tab per category
 
-1. Click the **New Dashboard** icon (bottom bar, grid-with-plus).
+Mirror the Streamlit app's structure: **five dashboards in one workbook, one
+per analysis category**, which publish as tabs the viewer clicks through.
+
+1. Click the **New Dashboard** icon (bottom bar, grid-with-plus) and name it
+   **1 · Growth** (right-click the tab → **Rename**).
 2. Set **Size** (left panel) to **Automatic**, or Fixed 1200 × 900 for a
    consistent published layout.
-3. Drag your sheets from the left panel onto the canvas — a sensible layout
-   mirrors the analysis order: Revenue and EPS (Growth) top, Margins and the
-   two dual-axis diagnostic charts middle, balance-sheet and capital-return
-   charts bottom.
-4. Add global filters: on any placed sheet click the funnel icon (**Use as
-   Filter**), or show the `category` / `frequency` filter panels and set them
+3. Drag onto it the sheets that answer the Growth question: Revenue trend,
+   EPS trend, and their YoY-growth charts.
+4. Repeat four more times, one dashboard per category:
+   - **2 · Profitability** — Margins chart, Revenue Growth vs Operating
+     Margin (dual-axis), returns on capital
+   - **3 · Cash Generation** — Net Income vs OCF (dual-axis), Free Cash
+     Flow, OCF÷NI
+   - **4 · Financial Health & Solvency** — Debt vs Cash, Current
+     Ratio/Debt-to-Equity, balance sheet size
+   - **5 · Capital Allocation** — Shares Outstanding, Dividends + Buybacks,
+     Capex % of revenue
+   Order the dashboard tabs left-to-right in this numbering (drag tabs to
+   reorder) — it matches the analysis flow: growth → profits → cash →
+   resilience → allocation.
+5. On each dashboard add global filters: on any placed sheet click the funnel
+   icon (**Use as Filter**), or show the `frequency` filter panel and set it
    to apply to all sheets (dropdown → **Apply to Worksheets → All Using This
-   Data Source**).
-5. Add a text object at the top with the company name and an "analysis, not
-   advice" note.
+   Data Source**). A `category` filter is unnecessary in this layout — each
+   tab *is* a category; keep each sheet's own `metric` filter doing that work.
+6. Add a text object at the top of each dashboard with the company name and
+   an "analysis, not advice" note (build it once, copy-paste to the others).
 
 ## 9. Publish
 
@@ -166,7 +181,11 @@ Every row carries the SEC filing URL it came from. To surface it:
    publishing — there is no local-only save).
 2. Sign in, name the workbook, save. A browser window opens with your
    published dashboard.
-3. On the workbook's web page you can toggle **Show viz on profile**, and
+3. In the publish/save dialog, make sure **Show Sheets as Tabs** is enabled —
+   that's what turns your five category dashboards into clickable tabs for
+   viewers, matching the Streamlit app's navigation. (If you missed it, the
+   toggle is also on the workbook's web page under settings.)
+4. On the workbook's web page you can toggle **Show viz on profile**, and
    get share/embed links. Remember: the workbook *and its data* are now
    downloadable by anyone (⚠️ see the warning at the top).
 
